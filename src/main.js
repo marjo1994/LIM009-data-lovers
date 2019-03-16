@@ -1,5 +1,19 @@
 /* Manejo del DOM */
 
-console.log(POKEMON.pokemon);
+const dataPokemon = window.POKEMON.pokemon;
 
-console.log(POKEMON.pokemon[0].name);
+document.getElementById("names").innerHTML =`${dataPokemon.map( (dataPokemon) => {
+    return `Nombre: ${dataPokemon.name}
+    <br> Altura: ${dataPokemon.height}
+    <br> Peso: ${dataPokemon.weight}
+    <br> N°apariciones/10,000 : ${dataPokemon.avg_spawns} veces
+    <br> Hora probable para encontrarlo: ${dataPokemon.spawn_time}
+    <br><br>
+    `;
+}).join('')}`;
+
+
+
+
+
+
