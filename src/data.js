@@ -11,6 +11,7 @@ window.example = example;*/
 
 //Ordenar por N°Apariciones
 
+<<<<<<< HEAD
 
 const Asc = (a,b)=> {
   return a.avg_spawns - b.avg_spawns
@@ -27,6 +28,19 @@ const sorDatabySpawnsD = (dataPokemon,Desc) => {
 };
 window.sorDatabySpawnsD = sorDatabySpawnsD;
 
+=======
+for(let i=0;i<POKEMON.pokemon.length;i++){
+ namesPokemon.push(POKEMON.pokemon[i].name);
+ }
+const namesPokemonOrdered = namesPokemon.sort()
+
+ console.log(namesPokemonOrdered);
+
+// const deadBeforeSXX = inventors.filter(inventor => (inventor.passed < 1900));
+
+//const filterbyTipe = POKEMON.pokemon.filter()
+ 
+>>>>>>> dd0bfc7a95be41b034a6fc4bfce117d4f57e3533
 
 const prueba =datapokemon.sort();
 
