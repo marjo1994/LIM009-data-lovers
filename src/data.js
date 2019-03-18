@@ -11,7 +11,7 @@ window.example = example;*/
 
 //Ordenar por N°Apariciones
 
-function sorDatabySpawns(dataPokemon) {
+const sorDatabySpawns = (dataPokemon) => {
 dataPokemon.sort(function(a, b){
   return a.avg_spawns - b.avg_spawns
 });
