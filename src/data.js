@@ -9,29 +9,25 @@
 
 window.example = example;*/
 
-//sortData(dataPokemon2, sortBy, sortOrder);
+//Ordenar por N°Apariciones
 
-const dataPokemon2 = window.POKEMON.pokemon;
-
-const nombresOrdenados= dataPokemon2.sort((a,b)=> a< b ? a : b )   
-console.log(nombresOrdenados);
-/*
-const nombresOrdenados2= dataPokemon2.sort((a,b)=>{
-
-  if (a.name > b.name){
-       return 1 ;
-  }
-  else if (a.name< b.name){
-      return -1;
-    }   
-  else{
-       return 0;
-    }   
-    
- }).reverse();
-
- console.log (nombresOrdenados2);
+const Asc = (a,b)=> {
+  return a.avg_spawns - b.avg_spawns
+}
+const Desc =(a,b)=>{
+  return b.avg_spawns - a.avg_spawns
+}
 
 
+const sorDatabySpawnsA = (dataPokemon,Asc) => {
+  dataPokemon.sort(Asc)  
+};
 
-*/
+window.sorDatabySpawnsA = sorDatabySpawnsA;
+
+const sorDatabySpawnsD = (dataPokemon,Desc) => {
+  dataPokemon.sort(Desc)  
+};
+window.sorDatabySpawnsD = sorDatabySpawnsD;
+
+
