@@ -15,9 +15,12 @@ for(let i=0;i<POKEMON.pokemon.length;i++){
  namesPokemon.push(POKEMON.pokemon[i].name);
  }
 const namesPokemonOrdered = namesPokemon.sort()
-// const deadBeforeSXX = inventors.filter(inventor => (inventor.passed < 1900));
+
  console.log(namesPokemonOrdered);
 
+// const deadBeforeSXX = inventors.filter(inventor => (inventor.passed < 1900));
+
+//const filterbyTipe = POKEMON.pokemon.filter()
  
 
 
