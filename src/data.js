@@ -9,15 +9,29 @@
 
 window.example = example;*/
 
+//sortData(dataPokemon2, sortBy, sortOrder);
 
-/*let namesPokemon = [];
+const dataPokemon2 = window.POKEMON.pokemon;
 
-for(let i=0;i<POKEMON.pokemon.length;i++){
- namesPokemon.push(POKEMON.pokemon[i].name);
- }
+const nombresOrdenados= dataPokemon2.sort((a,b)=> a< b ? a : b )   
+console.log(nombresOrdenados);
+/*
+const nombresOrdenados2= dataPokemon2.sort((a,b)=>{
 
-const namesPokemonOrdered = namesPokemon.sort()*/
+  if (a.name > b.name){
+       return 1 ;
+  }
+  else if (a.name< b.name){
+      return -1;
+    }   
+  else{
+       return 0;
+    }   
+    
+ }).reverse();
+
+ console.log (nombresOrdenados2);
 
 
 
-
+*/
