@@ -17,15 +17,27 @@ let displayCards = () => {
        
 displayCards(dataPokemon);
 
+//Mostrar en pantalla Cards ordenadas por nombre
+document.getElementById("ordsnameA").addEventListener("click",() => {
+    displayCards(sorData(dataPokemon,'name','ASC'))
+    });
+
+
+document.getElementById("ordsnameD").addEventListener("click",()=>{
+    displayCards(sorData(dataPokemon,'name','DESC'))
+});
+
+
+
 //Mostrar en pantalla Cards ordenadas por N°Apariciones
 
 document.getElementById("ordspawnA").addEventListener("click",() => {
-    displayCards(sorDatabySpawnsA(dataPokemon,Asc));
+    displayCards(sorData(dataPokemon,'avg_spawns','ASC'))
     });
 
 
 document.getElementById("ordspawnD").addEventListener("click",()=>{
-    displayCards(sorDatabySpawnsD(dataPokemon,Desc));
+    displayCards(sorData(dataPokemon,'avg_spawns','DESC'))
 });
 
 
