@@ -9,15 +9,14 @@
 
 window.example = example;*/
 
+//Ordenar por N°Apariciones
 
-/*let namesPokemon = [];
+function sorDatabySpawns(dataPokemon) {
+dataPokemon.sort(function(a, b){
+  return a.avg_spawns - b.avg_spawns
+});
+};
 
-for(let i=0;i<POKEMON.pokemon.length;i++){
- namesPokemon.push(POKEMON.pokemon[i].name);
- }
-
-const namesPokemonOrdered = namesPokemon.sort()*/
-
-
+window.sorDatabySpawns = sorDatabySpawns;
 
 
