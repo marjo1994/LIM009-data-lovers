@@ -7,28 +7,54 @@
   return 'example';
 };
 
-window.example = example;*/
+window.example = example;
 
 //Ordenar por N°Apariciones
+let compare; 
+dataPokemon.sort(compare);*/
 
-const Asc = (a,b)=> {
-  return a.avg_spawns - b.avg_spawns
+const sorData =(dataPokemon, sortBy, sortOrder) =>{
+let pokemonOrder =[];
+switch (sortOrder){
+case 'ASC':
+    if (sortBy==='name'){
+      pokemonOrder =dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+}else{
+      pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
 }
-const Desc =(a,b)=>{
-  return b.avg_spawns - a.avg_spawns
+break;
+
+case 'DESC':
+if (sortBy==='name'){
+  pokemonOrder =dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+}else{
+  pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1)).reverse();
 }
-const sorDatabySpawnsA = (dataPokemon,Asc) => {
-  dataPokemon.sort(Asc)  
-};
-window.sorDatabySpawnsA = sorDatabySpawnsA;
-const sorDatabySpawnsD = (dataPokemon,Desc) => {
-  dataPokemon.sort(Desc)  
-};
-window.sorDatabySpawnsD = sorDatabySpawnsD;
+break;
+default:
+}
+return pokemonOrder;
+}
+
+window.sorData =sorData;
 
 
-const prueba =datapokemon.sort();
 
-const Prueba2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
