@@ -7,11 +7,10 @@
   return 'example';
 };
 
-window.example = example;
+window.example = example;*/
 
 //Ordenar por N°Apariciones
-let compare; 
-dataPokemon.sort(compare);*/
+
 
 const sorData =(dataPokemon, sortBy, sortOrder) =>{
 let pokemonOrder =[];
@@ -27,9 +26,9 @@ break;
 
 case 'DESC':
 if (sortBy==='name'){
-  pokemonOrder =dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+  pokemonOrder =dataPokemon.sort((a, b) => (a.name < b.name ? 1 : -1))
 }else{
-  pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1)).reverse();
+  pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1))
 }
 break;
 default:
