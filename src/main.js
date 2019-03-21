@@ -43,8 +43,7 @@ document.getElementById("ordspawnD").addEventListener("click",()=>{
     displayCards(sorData(dataPokemon,'avg_spawns','DESC'))
 });
 
-//Filtrar por tipo de pokemon
-console.log(selectUniqueTypes(dataPokemon));
+//Mostrar en pantalla tipos de Pokemones
 
 const displaySelectTypesOfPokemon = (types) => {
     let string = '';

@@ -25,6 +25,8 @@ return pokemonOrder;
 
 window.sorData = sorData;
 
+//Obtener un array de tipos de pokemones
+
 const selectUniqueTypes = (data) => {
   let tipos =[];
   data.map((obj) => {
