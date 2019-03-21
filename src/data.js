@@ -39,3 +39,10 @@ const distintos =[...new Set(tipos)];
 }
 
 window.selectUniqueTypes = selectUniqueTypes;
+
+
+const filterBy = (data,condition) => {
+  const filterbytype = data.filter(element => {
+    return element.type.indexOf(condition) > -1
+})
+};

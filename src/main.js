@@ -44,15 +44,14 @@ document.getElementById("ordspawnD").addEventListener("click",()=>{
 });
 
 //Mostrar en pantalla tipos de Pokemones
+const typeOfPokemon = document.getElementById("type");
 
 const displaySelectTypesOfPokemon = (types) => {
     let string = '';
     for(let i = 0; i < types.length; i++){
-        string += ` <select>
-        <option value="volvo"> ${types[i]}Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="vw">VW</option>
-        <option value="audi" selected>Audi</option>
-      </select> `
+        string += `<option value=${types[i]}>${types[i]}</option>`
     }
+    return typeOfPokemon.innerHTML = string;
 }
+
+displaySelectTypesOfPokemon(selectUniqueTypes);
