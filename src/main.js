@@ -5,7 +5,6 @@ const cardsContainer = document.getElementById("cards");
 
 const displayCards = (data) => {
     let string = '';
-
     for(let i = 0; i <data.length; i++){
        string +=  `Nombre: ${data[i].name}
        <br> Altura: ${data[i].height}

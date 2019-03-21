@@ -1,4 +1,3 @@
-
 const sorData =(dataPokemon, sortBy, sortOrder) =>{
 let pokemonOrder =[];
 switch (sortOrder){
