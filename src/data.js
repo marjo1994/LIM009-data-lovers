@@ -1,18 +1,3 @@
-/* Manejo de data */
-
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-/*const example = () => {
-  return 'example';
-};
-
-window.example = example;
-
-//Ordenar por N°Apariciones
-let compare; 
-dataPokemon.sort(compare);*/
-
 const sorData =(dataPokemon, sortBy, sortOrder) =>{
 let pokemonOrder =[];
 switch (sortOrder){
@@ -35,9 +20,72 @@ break;
 default:
 }
 return pokemonOrder;
+};
+
+const selectUniqueTypes = (data) => {
+  let tipos =[];
+  data.map((obj) => {
+  obj.type.forEach((string)=>{
+    tipos.push(string);
+  });
+});
+const distintos =[...new Set(tipos)];
+  return distintos
 }
 
-window.sorData =sorData;
+
+
+
+window.sorData = sorData;
+window.selectUniqueTypes = selectUniqueTypes;
+//como me aseguro que el array original no e
+
+/*
+
+ dataPokemon1 = window.POKEMON.pokemon;
+
+let tipos =[];
+dataPokemon1.map((element) => {
+  
+  element.type.forEach((tipo1)=>{
+    tipos.push(tipo1);
+  });
+});
+const distintos =[...new Set(tipos)];
+
+console.log (distintos);
+
+
+const dataPokemon1 = window.POKEMON;
+
+window.dataPokemon1 ={
+  filtrado:(typeSelected)=>{
+    let newTypeArray = pokemon.filter((objeto)=>{
+return (objeto.type ===typeSelected);
+    });
+    console.log(newTypeArray);
+    
+  return newTypeArray;
+  }
+};
+*/
+//copiar map 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
