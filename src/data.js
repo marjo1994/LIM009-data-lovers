@@ -12,15 +12,19 @@ break;
 
 case 'DESC':
 if (sortBy==='name'){
-  pokemonOrder =dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1)).reverse();
+  pokemonOrder =dataPokemon.sort((a, b) => (a.name < b.name ? 1 : -1));
 }else{
-  pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1)).reverse();
+  pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1));
 }
 break;
 default:
 }
 return pokemonOrder;
 };
+
+window.sorData = sorData;
+
+//Obtener un array de tipos de pokemones
 
 const selectUniqueTypes = (data) => {
   let tipos =[];
@@ -33,76 +37,4 @@ const distintos =[...new Set(tipos)];
   return distintos
 }
 
-
-
-
-window.sorData = sorData;
 window.selectUniqueTypes = selectUniqueTypes;
-//como me aseguro que el array original no e
-
-/*
-
- dataPokemon1 = window.POKEMON.pokemon;
-
-let tipos =[];
-dataPokemon1.map((element) => {
-  
-  element.type.forEach((tipo1)=>{
-    tipos.push(tipo1);
-  });
-});
-const distintos =[...new Set(tipos)];
-
-console.log (distintos);
-
-
-const dataPokemon1 = window.POKEMON;
-
-window.dataPokemon1 ={
-  filtrado:(typeSelected)=>{
-    let newTypeArray = pokemon.filter((objeto)=>{
-return (objeto.type ===typeSelected);
-    });
-    console.log(newTypeArray);
-    
-  return newTypeArray;
-  }
-};
-*/
-//copiar map 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
