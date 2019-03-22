@@ -1,5 +1,6 @@
 /* Manejo del DOM */
 const dataPokemon = window.POKEMON.pokemon;
+
 //Mostrar data en pantalla
 const cardsContainer = document.getElementById("cards");
 
@@ -26,30 +27,27 @@ const displayCards = (data) => {
 displayCards(dataPokemon);
 
 //Mostrar en pantalla Cards ordenadas por nombre
-document.getElementById("ordsnameA").addEventListener("click",() => {
+document.getElementById("ordsname-a").addEventListener("click",() => {
   displayCards(sorData(dataPokemon,'name','ASC'))
 });
 
-document.getElementById("ordsnameD").addEventListener("click",()=>{
+document.getElementById("ordsname-d").addEventListener("click",()=>{
     displayCards(sorData(dataPokemon,'name','DESC'))
 });
 
-
-
 //Mostrar en pantalla Cards ordenadas por N°Apariciones
 
-document.getElementById("ordspawnA").addEventListener("click",() => {
+document.getElementById("ordspawn-a").addEventListener("click",() => {
   displayCards(sorData(dataPokemon,'avg_spawns','ASC'))
 });
 
-document.getElementById("ordspawnD").addEventListener("click",()=>{
+document.getElementById("ordspawn-d").addEventListener("click",()=>{
   displayCards(sorData(dataPokemon,'avg_spawns','DESC'))
 });
 
 //Mostrar en pantalla tipos de Pokemones
 
-const arr = selectUniqueTypes(dataPokemon);
-const typeOf = document.getElementById("type")
+const typeOf = document.getElementById("type");
 
 const displaySelectTypesOfPokemon = (types) => {
   let string = ''
@@ -59,20 +57,14 @@ const displaySelectTypesOfPokemon = (types) => {
   return typeOf.innerHTML = string;
 }
 
-displaySelectTypesOfPokemon(arr);
+displaySelectTypesOfPokemon(selectUniqueTypes(dataPokemon));
 
-const selectType = document.getElementById("type");
+// Click en el tipo de pokemon que el usuario desea filtrar
 
 const onSelectType = () =>{
-  debugger
-
-  let selectedOption=selectType[selectType.selectedIndex].value;
-
-  displayCards(filterBy(dataPokemon,selectedOption));
+  let selectedOption = typeOf[typeOf.selectedIndex].value;
+  return displayCards(filterBy(dataPokemon,selectedOption));
 
 };
 
-selectType.addEventListener('change', onSelectType);
-
-
-//displayCards(filterBy(dataPokemon,"Grass"));
+typeOf.addEventListener('change', onSelectType);

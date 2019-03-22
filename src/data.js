@@ -1,15 +1,15 @@
 //Función para ordenar los pokemones por nombre y N Apariciones promedio
 //De manera ascedente y descendente
 
-const sorData =(dataPokemon, sortBy, sortOrder) =>{
+const sorData =(dataPokemon, sortBy, sortOrder) => {
 let pokemonOrder =[];
 switch (sortOrder){
 case 'ASC':
     if (sortBy==='name'){
-      pokemonOrder =dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
+      pokemonOrder = dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
 
 }else{
-      pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
+      pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
 }
 break;
 
@@ -56,3 +56,18 @@ const filterBy = (data, condition) => {
 };
 
 window.filterBy =filterBy;
+
+const computeAvgSpawns = (arr,option) => {
+  let arrAvgSpawns =[];
+  for (let i=0; i<arr.length; i++) {
+    arrAvgSpawns.push(arr[i].avg_spawns);
+  }
+
+  if(option === 'Max') {
+  return  Math.max.apply(null,arrAvgSpawns);
+  } else{
+  return  Math.mix.apply(null,arrAvgSpawns);
+  }
+ }
+
+ window.computeAvgSpawns = computeAvgSpawns;
