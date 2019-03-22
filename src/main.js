@@ -61,13 +61,18 @@ const displaySelectTypesOfPokemon = (types) => {
 
 displaySelectTypesOfPokemon(arr);
 
-document.getElementById("type").addEventListener('change', OnSelectType());
+const selectType = document.getElementById("type");
 
-/*const OnSelectType = (select) =>{
-let selectedOption=select.option[select.value];
-if (selectedOption===condition){
-  return displayCards(filterBy(dataPokemon,condition));
-}
-};*/
+const onSelectType = () =>{
+  debugger
+
+  let selectedOption=selectType[selectType.selectedIndex].value;
+
+  displayCards(filterBy(dataPokemon,selectedOption));
+
+};
+
+selectType.addEventListener('change', onSelectType);
+
 
 //displayCards(filterBy(dataPokemon,"Grass"));
