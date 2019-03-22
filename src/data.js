@@ -1,3 +1,5 @@
+//Función para ordenar los pokemones por nombre y N Apariciones promedio
+//De manera ascedente y descendente
 
 const sorData =(dataPokemon, sortBy, sortOrder) =>{
 let pokemonOrder =[];
@@ -25,11 +27,11 @@ return pokemonOrder;
 
 window.sorData = sorData;
 
-//Obtener un array de tipos de pokemones
+//Obtener un array de tipos de pokemones sin duplicados
 
 const selectUniqueTypes = (data) => {
   let tipos =[];
-  data.map((obj) => {
+  data.forEach((obj) => {
   obj.type.forEach((string)=>{
     tipos.push(string);
   });
@@ -40,9 +42,17 @@ const distintos =[...new Set(tipos)];
 
 window.selectUniqueTypes = selectUniqueTypes;
 
+//Función para filtrar los pokemones por tipos
 
-const filterBy = (data,condition) => {
+const filterBy = (data, condition) => {
   const filterbytype = data.filter(element => {
-    return element.type.indexOf(condition) > -1
-})
+    for(let i=0;i<element.type.length;i++){
+      if(element.type[i] === condition){
+        return 1;
+      }
+    }
+    })
+  return filterbytype;
 };
+
+window.filterBy =filterBy;
