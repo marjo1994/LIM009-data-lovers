@@ -68,3 +68,8 @@ const onSelectType = () =>{
 };
 
 typeOf.addEventListener('change', onSelectType);
+
+
+
+document.getElementById ('max-avg').innerHTML = computeAvgSpawns(dataPokemon,'Max');
+document.getElementById ('min-avg').innerHTML = computeAvgSpawns(dataPokemon,'Min');
