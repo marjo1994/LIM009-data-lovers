@@ -68,3 +68,9 @@ const onSelectType = () =>{
 };
 
 typeOf.addEventListener('change', onSelectType);
+
+//Mostrar en pantalla el máximo n° de apariciones y el mínimo n° de apariciones.
+
+document.getElementById('max-avg').innerHTML = computeAvgSpawns(dataPokemon,'Max');
+
+document.getElementById('min-avg').innerHTML = computeAvgSpawns(dataPokemon,'Min');

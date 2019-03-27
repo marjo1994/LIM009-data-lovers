@@ -57,16 +57,16 @@ const filterBy = (data, condition) => {
 
 window.filterBy =filterBy;
 
-const computeAvgSpawns = (arr,option) => {
+const computeAvgSpawns = (data,option) => {
   let arrAvgSpawns =[];
-  for (let i=0; i<arr.length; i++) {
-    arrAvgSpawns.push(arr[i].avg_spawns);
+  for (let i=0; i<data.length; i++) {
+    arrAvgSpawns.push(data[i].avg_spawns);
   }
 
   if(option === 'Max') {
   return  Math.max.apply(null,arrAvgSpawns);
-  } else{
-  return  Math.mix.apply(null,arrAvgSpawns);
+  } else {
+  return  Math.min.apply(null,arrAvgSpawns);
   }
  }
 
