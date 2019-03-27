@@ -1,26 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- body{
+html {
     font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
  }
+
+ /*Header & Banner*/
+
 header{
     width: 100%;
     height: 50px;
-    background: blue;
+    background: rgb(37,218,134);
     color:white;
     position: fixed;
     top:0;
     left: 0;
     z-index: 100;
+    font-size: 1.6rem;
 }
 .contenedor{
     width: 98%;
     margin: auto;
-}
+    }
+.contenedor .title{
+    font-family: 'Luckiest Guy', cursive;
+    }
 #menu-bar{
     display: none;
 }
@@ -40,7 +49,7 @@ h1{
  left: 0;
  width: 100%;
  height: 100vh;
- background: rgb(51,51,51, 0.9);
+ background-color: rgb(37,218,134);
  transition: all, 0.5s;
  transform: translateX(-100%);
 }
@@ -50,12 +59,12 @@ header.contenedor{
 
 }
 .navbar-menu li{
-    display: block;
+    display: inline-table;
     color: white;
     height: 50px;
     list-style-type: none;
     padding: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(21, 143, 243, 0.13);
 }
 .navbar-menu li:hover {
     background: rgba(255,255,255,0.3);
@@ -64,18 +73,152 @@ header.contenedor{
 transform: translateX(0%);
 }
 
-#banner{
-    margin-top:50px;
+.banner p {
+    font-size: 1.5rem;
+    width: 50%;
+    }
+
+.banner{
+    margin-top: 50px;
     position: relative;
 }
-#banner img{
+.banner img{
     width: 100%;
     height: 100%;
 }
-#banner .contenedor{
+.banner .contenedor{
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color:white;
 }
+.banner .btn-empezar{
+    display:block;
+    width: 70px;
+    background-color: rgb(81,226,159,0.5);
+    color:white;
+    padding:5px;
+    margin-top:30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+@media (min-width:700px){
+    .navbar-menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex; 
+    }
+    .navbar-menu .nav{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .navbar-menu .nav:hover{
+       background: rgba(255,255,255,0.3)
+    }
+    .navbar-menu li{
+        border: none;
+    }
+    header label{
+        display: none;
+    }
+    .banner p {
+        font-size: 3rem;
+    }
+}
+
+/* diseño de funcionalidades*/
+
+.section-card .process-data{
+
+    background-color: white;
+    width: 100%;
+    padding: 5%;
+    display: inline-table;
+
+    
+}
+
+
+
+
+
+
+
+
+/*Cards*/
+
+.section-card {
+    padding: 2rem 0;
+    background-color:rgb(37,218,134);
+    width: 100%;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.card-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 25rem;
+    background-color: rgb(138, 245, 222,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    padding:1.5rem;
+    box-shadow: 0.5rem 0.5rem 3rem rgb(0, 255, 234);      
+}
+
+.card-img {
+   margin: 1rem 0;
+}
+
+
+.card p {
+    font-size: 1.5rem;
+}
+
+.card .name-pokemon {
+    font-size: 2rem;
+    color: white;
+}
+
+@media screen and (min-width: 700px) {
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        margin: 2rem;
+    }
+
+    @keyframes movementofcards {
+        0% {opacity: 0;}
+        100%{opacity: 1;}
+    }
+    .card:nth-child(n){
+        animation: movementofcards .5s .5s backwards;
+    }
+}
+
+

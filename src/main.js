@@ -8,18 +8,16 @@ const displayCards = (data) => {
   let string = '';
   for (let i = 0; i <data.length; i++) {
     string += `
-      <div>
-        <div>
-          <p> Nombre: ${data[i].name}</p>
+      <div class="card">
+          <p class="name-pokemon">${data[i].name}</p>
+          <img class="card-img" src="${data[i].img}" alt="imagen de ${data[i].name}">
           <p> Altura: ${data[i].height}</p>
           <p> Peso: ${data[i].weight}</p>
           <p> N°apariciones/10,000 : ${data[i].avg_spawns} veces</p>
           <p> Hora probable para encontrarlo: ${data[i].spawn_time}</p>
           <p> Tipos: ${data[i].type}</p>
-        </div>
-        <img src="${data[i].img}" alt="imagen de ${data[i].name}">
       </div>
-    `;
+      `;
   }
   return cardsContainer.innerHTML = string;
 }
@@ -70,6 +68,6 @@ const onSelectType = () =>{
 typeOf.addEventListener('change', onSelectType);
 
 
-
+//Mostrar Maximo y mínimo de n° de apariciones
 document.getElementById ('max-avg').innerHTML = computeAvgSpawns(dataPokemon,'Max');
 document.getElementById ('min-avg').innerHTML = computeAvgSpawns(dataPokemon,'Min');
