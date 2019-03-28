@@ -4,8 +4,7 @@ require('../src/data');
 require('./data.spec.js');
 
 
-describe('sorData', () => {
-  
+describe('sorData', () => {  
   it('debería ser una función', () => {
     assert.equal(typeof sorData, 'function');
   });
@@ -13,4 +12,4 @@ describe('sorData', () => {
   it('debería retornar "ASC"', () => {
     assert.equal(sorData(), 'example');
   });
-})
+});

@@ -32,11 +32,16 @@
     "indent": [1, 2],
     "no-array-constructor": 1,
     "no-const-assign": "error",
-    "no-var": "error"    
+    "no-var": "error"   
+    
  },
   "extends": "eslint:recommended",
   "globals": {
-    "example": false,
+    "sorData": true,
+    "selectUniqueTypes":true,
+    "filterBy":true,
+    "computeAvgSpawns":true,
+    "computeCountTypePokemons" :true,
     "google": false
   }
 }
