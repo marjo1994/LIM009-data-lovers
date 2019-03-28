@@ -23,8 +23,6 @@ const sorData = (data, sortBy, sortOrder) => {// Función para ordenar los pokem
 
 window.sorData = sorData;
 
-console.log(sorData(dataPokemon,'name','ASC'));
-
 const selectUniqueTypes = (data) => { /*  Obtener un array de tipos de pokemones sin duplicados */
   let tipos = [];
   data.forEach((obj) => {

@@ -1,5 +1,5 @@
 /* Manejo del DOM */
-const dataPokemon = POKEMON.pokemon;
+const dataPokemon = window.POKEMON.pokemon;
 const cardsContainer = document.getElementById('cards');
 const orderNameAsc = document.getElementById('ordsname-a');
 const orderNameDes = document.getElementById('ordsname-d');
