@@ -59,7 +59,7 @@ header.contenedor{
 
 }
 .navbar-menu li{
-    display: inline-table;
+  
     color: white;
     height: 50px;
     list-style-type: none;
@@ -123,12 +123,20 @@ transform: translateX(0%);
     }
     .navbar-menu li{
         border: none;
+        display: inline-table;
     }
     header label{
         display: none;
     }
     .banner p {
         font-size: 3rem;
+    }
+    .banner .btn-empezar{
+        
+        padding:20px;       
+        font-size: 2rem;
+        width: 150px;
+      
     }
 }
 
@@ -140,22 +148,14 @@ transform: translateX(0%);
     width: 100%;
     padding: 5%;
     display: inline-table;
-
-    
+  
 }
-
-
-
-
-
-
-
 
 /*Cards*/
 
 .section-card {
     padding: 2rem 0;
-    background-color:rgb(37,218,134);
+    background-color:rgb(0,79,38);
     width: 100%;
 }
 
