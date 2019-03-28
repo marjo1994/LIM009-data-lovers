@@ -1,19 +1,19 @@
-const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar los pokemones por nombre y N Apariciones promedio
+const sorData = (data, sortBy, sortOrder) => {// Función para ordenar los pokemones por nombre y N Apariciones promedio
   let pokemonOrder = [];
   switch (sortOrder) {
-  case 'ASC':// De manera ascedente 
+  case 'ASC':// De manera ascedente
     if (sortBy === 'name') {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.name > b.name ? 1 : -1));
     } else {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
     }
     break;
 
   case 'DESC':// De manera descendente
     if (sortBy === 'name') {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.name < b.name ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.name < b.name ? 1 : -1));
     } else {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1));
     }
     break;
   default:
@@ -22,6 +22,8 @@ const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar lo
 };
 
 window.sorData = sorData;
+
+console.log(sorData(dataPokemon,'name','ASC'));
 
 const selectUniqueTypes = (data) => { /*  Obtener un array de tipos de pokemones sin duplicados */
   let tipos = [];
@@ -75,4 +77,3 @@ const computeCountTypePokemons = (data, condition) => { /*  funcion para contar 
 };
 
 window.computeCountTypePokemons = computeCountTypePokemons;
-

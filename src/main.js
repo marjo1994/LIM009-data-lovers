@@ -1,5 +1,5 @@
 /* Manejo del DOM */
-const dataPokemon = window.POKEMON.pokemon;
+const dataPokemon = POKEMON.pokemon;
 const cardsContainer = document.getElementById('cards');
 const orderNameAsc = document.getElementById('ordsname-a');
 const orderNameDes = document.getElementById('ordsname-d');
@@ -70,6 +70,6 @@ const displayTypesOfPokemon = (types) => {
     string += `<p>${types[i]}</p>`;
   }
   return displayCountTypesOfPokemon.innerHTML = string;
-}; 
+};
 
 displayTypesOfPokemon(computeCountTypePokemons(dataPokemon, selectUniqueTypes(dataPokemon)));
