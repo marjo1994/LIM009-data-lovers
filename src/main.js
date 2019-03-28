@@ -8,18 +8,16 @@ const displayCards = (data) => {
   let string = '';
   for (let i = 0; i <data.length; i++) {
     string += `
-      <div>
-        <div>
-          <p> Nombre: ${data[i].name}</p>
+      <div class="card">
+          <p class="name-pokemon">${data[i].name}</p>
+          <img class="card-img" src="${data[i].img}" alt="imagen de ${data[i].name}">
           <p> Altura: ${data[i].height}</p>
           <p> Peso: ${data[i].weight}</p>
           <p> N°apariciones/10,000 : ${data[i].avg_spawns} veces</p>
           <p> Hora probable para encontrarlo: ${data[i].spawn_time}</p>
           <p> Tipos: ${data[i].type}</p>
-        </div>
-        <img src="${data[i].img}" alt="imagen de ${data[i].name}">
       </div>
-    `;
+      `;
   }
   return cardsContainer.innerHTML = string;
 }
@@ -71,6 +69,40 @@ typeOf.addEventListener('change', onSelectType);
 
 //Mostrar en pantalla el máximo n° de apariciones y el mínimo n° de apariciones.
 
-document.getElementById('max-avg').innerHTML = computeAvgSpawns(dataPokemon,'Max');
+//document.getElementById('max-avg').innerHTML = computeAvgSpawns(dataPokemon,'Max');
 
-document.getElementById('min-avg').innerHTML = computeAvgSpawns(dataPokemon,'Min');
+//document.getElementById('min-avg').innerHTML = computeAvgSpawns(dataPokemon,'Min');
+
+
+const arrAvgSpawns =[];
+dataPokemon.forEach(element => arrAvgSpawns.push(element.avg_spawns))
+//console.log(arrAvgSpawns);
+
+const resultAvgSpawns = [];
+dataPokemon.forEach(element => resultAvgSpawns.push([element.avg_spawns,element.name]))
+//console.log(resultAvgSpawns);
+
+const MaxAvgSpawns = Math.max.apply(null,arrAvgSpawns);
+//console.log(MaxAvgSpawns);
+
+const computeMaxAvgSpawns = (data) => {
+  const Maxfilter = data.filter(obj => obj[0] === MaxAvgSpawns);
+  return ´Nombre: ${Maxfilter[1]}´ ;
+}
+console.log(computeMaxAvgSpawns(resultAvgSpawns));
+
+const computeMinAvgSpawns = (data) => {
+
+  const Minfilter = data.filter(obj => obj[0] === 0);  
+  return Minfilter;
+  
+}
+//console.log(computeMinAvgSpawns(resultAvgSpawns));
+
+
+
+
+
+  
+
+

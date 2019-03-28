@@ -2,25 +2,67 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
+    <link rel="stylesheet" href="fontello.css" />
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
-    <div id="root"></div>
-    <header>
-      <div class="logo">
-        POKEMON
+       <header>
+      <div class="contenedor"> 
+        <h1 class="title">Pokeinfo</h1>    
+        <input type="checkbox" id="menu-bar">
+        <label class="icon-menu" for="menu-bar"></label>
+        <nav class="navbar-menu">
+          <ul class="nav">
+            <li>Inicio</li>
+            <li>Cards</li>
+            <li>Estadisticas </li>
+          </ul>
+        </nav>
       </div>
-      <ul>
-        <li>Inicio</li>
-        <li>Panel</li>
-        <li>Estadísticas</li>
-      </ul>
     </header>
+
+<main>
+  <section class = "banner">
+    <img src="https://images7.alphacoders.com/661/661975.png">
+    <div class="contenedor">
+      <p>
+        Todo lo que quieres saber de los pokemones.
+      </p>
+     <a  class ="btn-empezar" href="#sect-card">Empezar</a>
+    </div>
+
+  </section>
+  <section id="sect-card" class="section-card">
+    <div class ="contenedor-cards">
+      <p class="heading">Atrapa a tus pokemones favoritos</p>
+      <div class="process-data">
+          <button id ="ordsname-a">Ordenar por nombre ascendente</button>
+          <button id= "ordsname-d">Ordenar por nombre descendente</button>
+          <button id ="ordspawn-a">Ordenar pors numero de apariciones Ascendente</button>
+          <button id= "ordspawn-d">Ordenar por numero de apariciones Descendente</button>
+          <select name="type" id="type"></select>     
+      </div>
+      <div id ="cards" class="card-wrapper">
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+</main>
+
+
+
+
+
+
+
     <div id ="inicio">
-      <h1>BIENVENIDO A POKEINFO</h1>
-      <p>Somos Pokeinfo, la página web que te pondrá al día respecto a tus pokemones favoritos.</p>
-      <p>Búscanos en facebook</p>
     </div>
     <div id="panel">
       <button id ="ordsname-a">Ordenar por nombre ascendente</button>
@@ -32,7 +74,7 @@
       <p id="max-avg"></p>
       <p>Mínimo N°Apariciones</p>
       <p id="min-avg">
-      <div id="cards"> </div>
+     
     </div>
     <footer>Derechos reservados</footer>
     <script src="./data/pokemon/pokemon.js"></script>

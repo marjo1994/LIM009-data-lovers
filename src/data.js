@@ -57,17 +57,31 @@ const filterBy = (data, condition) => {
 
 window.filterBy =filterBy;
 
+
+/*for (let i=0; i<data.length; i++) {
+  arrAvgSpawns.push(data[i].avg_spawns);
+}*/
+
+
+/*const resultAvgSpawns = [];/*
+
+
+
+
+
 const computeAvgSpawns = (data,option) => {
-  let arrAvgSpawns =[];
-  for (let i=0; i<data.length; i++) {
-    arrAvgSpawns.push(data[i].avg_spawns);
-  }
+
 
   if(option === 'Max') {
   return  Math.max.apply(null,arrAvgSpawns);
-  } else {
+  } else if(arrAvgSpawns[]=== 0){
   return  Math.min.apply(null,arrAvgSpawns);
   }
  }
 
- window.computeAvgSpawns = computeAvgSpawns;
+window.computeAvgSpawns = computeAvgSpawns;*/
+
+
+
+
+
