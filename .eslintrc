@@ -42,6 +42,7 @@
     "filterBy":true,
     "computeAvgSpawns":true,
     "computeCountTypePokemons" :true,
+    "Set" :true,
     "google": false
   }
 }
