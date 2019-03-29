@@ -1,7 +1,7 @@
 const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar los pokemones por nombre y N Apariciones promedio
   let pokemonOrder = [];
   switch (sortOrder) {
-  case 'ASC':// De manera ascedente 
+  case 'git':// De manera ascedente 
     if (sortBy === 'name') {
       pokemonOrder = dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
     } else {
