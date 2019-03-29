@@ -38,7 +38,7 @@
   "globals": {
     "sorData": true,
     "selectUniqueTypes":true,
-    "filterBy":true,
+    "filterBy":false,
     "computeAvgSpawns":true,
     "computeCountTypePokemons" :true,
     "Set" :true,
