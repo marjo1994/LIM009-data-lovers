@@ -5,11 +5,9 @@ require('./data.spec.js');
 
 
 describe('sorData', () => {  
-  it('debería ser una función', () => {
-    assert.equal(typeof sorData, 'function');
-  });
-
-  it('debería retornar "ASC"', () => {
-    assert.equal(sorData(), 'example');
+  test('debería ser una función', () => {
+    expect(typeof sorData).toBe('function');
   });
 });
+
+
