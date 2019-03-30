@@ -1,4 +1,4 @@
-{
+ {
   "env": {
     "browser": true
   },
@@ -28,11 +28,11 @@
     "space-in-parens": 1,
     "spaced-comment": 1,
     "quotes": [1, "single"],
-    "id-length": [1, { "exceptions": ["i", "j", "x"] }],
+    "id-length": [1, { "exceptions": ["a", "b", "i"] }],
     "indent": [1, 2],
     "no-array-constructor": 1,
     "no-const-assign": "error",
-    "no-var": "error"
+    "no-var": "error"    
  },
   "extends": "eslint:recommended",
   "globals": {

@@ -1,87 +1,78 @@
-//Función para ordenar los pokemones por nombre y N Apariciones promedio
-//De manera ascedente y descendente
-
-const sorData =(dataPokemon, sortBy, sortOrder) => {
-let pokemonOrder =[];
-switch (sortOrder){
-case 'ASC':
-    if (sortBy==='name'){
+const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar los pokemones por nombre y N Apariciones promedio
+  let pokemonOrder = [];
+  switch (sortOrder) {
+  case 'ASC':// De manera ascedente 
+    if (sortBy === 'name') {
       pokemonOrder = dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
-
-}else{
+    } else {
       pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
-}
-break;
+    }
+    break;
 
-case 'DESC':
-if (sortBy==='name'){
-  pokemonOrder =dataPokemon.sort((a, b) => (a.name < b.name ? 1 : -1));
-}else{
-  pokemonOrder =dataPokemon.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1));
-}
-break;
-default:
-}
-return pokemonOrder;
+  case 'DESC':// De manera descendente
+    if (sortBy === 'name') {
+      pokemonOrder = dataPokemon.sort((a, b) => (a.name < b.name ? 1 : -1));
+    } else {
+      pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1));
+    }
+    break;
+  default:
+  }
+  return pokemonOrder;
 };
 
 window.sorData = sorData;
 
-//Obtener un array de tipos de pokemones sin duplicados
-
-const selectUniqueTypes = (data) => {
-  let tipos =[];
+const selectUniqueTypes = (data) => { /*  Obtener un array de tipos de pokemones sin duplicados */
+  let tipos = [];
   data.forEach((obj) => {
-  obj.type.forEach((string)=>{
-    tipos.push(string);
+    obj.type.forEach((string) => {
+      tipos.push(string);
+    });
   });
-});
-const distintos =[...new Set(tipos)];
-  return distintos
-}
+  const distintos = [...new Set(tipos)];
+  return distintos;
+};
 
 window.selectUniqueTypes = selectUniqueTypes;
 
-//Función para filtrar los pokemones por tipos
-
-const filterBy = (data, condition) => {
+const filterBy = (data, condition) => { /* Función para filtrar los pokemones por tipos */
   const filterbytype = data.filter(element => {
-    for(let i=0;i<element.type.length;i++){
-      if(element.type[i] === condition){
+    for (let i = 0; i < element.type.length; i++) {
+      if (element.type[i] === condition) {
         return 1;
       }
     }
-    })
+  });
   return filterbytype;
 };
 
-window.filterBy =filterBy;
+window.filterBy = filterBy;
 
-
-/*for (let i=0; i<data.length; i++) {
-  arrAvgSpawns.push(data[i].avg_spawns);
-}*/
-
-
-/*const resultAvgSpawns = [];/*
-
-
-
-
-
-const computeAvgSpawns = (data,option) => {
-
-
-  if(option === 'Max') {
-  return  Math.max.apply(null,arrAvgSpawns);
-  } else if(arrAvgSpawns[]=== 0){
-  return  Math.min.apply(null,arrAvgSpawns);
+const computeAvgSpawns = (arr, option) => { /* funcion para calcular max,min,promedio de avg-spawns */
+  let arrAvgSpawns = [];
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  for (let i = 0; i < arr.length; i++) {
+    arrAvgSpawns.push(arr[i].avg_spawns);
   }
- }
+  if (option === 'Max') {
+    return Math.max.apply(null, arrAvgSpawns);
+  } else if (option === 'Min') {
+    return Math.min.apply(null, arrAvgSpawns);
+  } else {
+    return (arrAvgSpawns.reduce(reducer)) / arr.length;
+  }
+};
 
-window.computeAvgSpawns = computeAvgSpawns;*/
+window.computeAvgSpawns = computeAvgSpawns;
 
+const computeCountTypePokemons = (data, condition) => { /*  funcion para contar pokemones segun tipo  */
+  let counTypePokemon = [];
+  for (let i = 0; i < condition.length; i++) {
+    counTypePokemon.push(condition[i] + '  ' + (filterBy(data, condition[i]).length));
+  }
+  return counTypePokemon;
+};
 
-
-
+window.computeCountTypePokemons = computeCountTypePokemons;
 

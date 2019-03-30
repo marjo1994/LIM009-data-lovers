@@ -3,14 +3,9 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-
-describe('example', () => {
+describe('sorData', () => {
   
   it('debería ser una función', () => {
-    assert.equal(typeof example, 'function');
+    assert.equal(typeof sorData, 'function');
   });
-
-  it('debería retornar "example"', () => {
-    assert.equal(example(), 'example');
-  });
-})
+});

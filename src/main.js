@@ -1,12 +1,19 @@
 /* Manejo del DOM */
 const dataPokemon = window.POKEMON.pokemon;
+const cardsContainer = document.getElementById('cards');
+const orderNameAsc = document.getElementById('ordsname-a');
+const orderNameDes = document.getElementById('ordsname-d');
+const orderAvgSpawnsAsc = document.getElementById('ordspawn-a');
+const orderAvgSpawnsDes = document.getElementById('ordspawn-d');
+const typeOf = document.getElementById('type');
+const maxAvg = document.getElementById('max-avg');
+const minAvg = document.getElementById('min-avg');
+const averageSpawns = document.getElementById('Promedio');
+const displayCountTypesOfPokemon = document.getElementById('display-types');
 
-//Mostrar data en pantalla
-const cardsContainer = document.getElementById("cards");
-
-const displayCards = (data) => {
+const displayCards = (data) => { /* mostrar los datos de pokemones en pantalla*/
   let string = '';
-  for (let i = 0; i <data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     string += `
       <div class="card">
           <p class="name-pokemon">${data[i].name}</p>
@@ -20,89 +27,49 @@ const displayCards = (data) => {
       `;
   }
   return cardsContainer.innerHTML = string;
-}
-
+};
 displayCards(dataPokemon);
 
-//Mostrar en pantalla Cards ordenadas por nombre
-document.getElementById("ordsname-a").addEventListener("click",() => {
-  displayCards(sorData(dataPokemon,'name','ASC'))
+orderNameAsc.addEventListener('click', () => { /*  Ordenado ascendente por nombre*/
+  displayCards(sorData(dataPokemon, 'name', 'ASC'));
+});
+orderNameDes.addEventListener('click', () => { /* Ordenado descendente por nombre*/
+  displayCards(sorData(dataPokemon, 'name', 'DESC'));
+});
+orderAvgSpawnsAsc.addEventListener('click', () => { /*  Ordenado ascendente por N° de Apariciones*/
+  displayCards(sorData(dataPokemon, 'avg_spawns', 'ASC'));
+});
+orderAvgSpawnsDes.addEventListener('click', () => { /*  Ordenado descendente por N° de Apariciones*/
+  displayCards(sorData(dataPokemon, 'avg_spawns', 'DESC'));
 });
 
-document.getElementById("ordsname-d").addEventListener("click",()=>{
-    displayCards(sorData(dataPokemon,'name','DESC'))
-});
-
-//Mostrar en pantalla Cards ordenadas por N°Apariciones
-
-document.getElementById("ordspawn-a").addEventListener("click",() => {
-  displayCards(sorData(dataPokemon,'avg_spawns','ASC'))
-});
-
-document.getElementById("ordspawn-d").addEventListener("click",()=>{
-  displayCards(sorData(dataPokemon,'avg_spawns','DESC'))
-});
-
-//Mostrar en pantalla tipos de Pokemones
-
-const typeOf = document.getElementById("type");
-
-const displaySelectTypesOfPokemon = (types) => {
-  let string = ''
-  for(let i in types) {
+const displaySelectTypesOfPokemon = (types) => { /* Cargar tipos de Pokemones en select*/
+  let string = ' ';
+  for (let i in types) {
     string += `<option value="${types[i]}">${types[i]} </option>`;
   }
   return typeOf.innerHTML = string;
-}
+};
 
 displaySelectTypesOfPokemon(selectUniqueTypes(dataPokemon));
 
-// Click en el tipo de pokemon que el usuario desea filtrar
-
-const onSelectType = () =>{
+const onSelectType = () => { /* funcion que muestra pokemones segun su tipo*/
   let selectedOption = typeOf[typeOf.selectedIndex].value;
-  return displayCards(filterBy(dataPokemon,selectedOption));
-
+  return displayCards(filterBy(dataPokemon, selectedOption));
 };
-
 typeOf.addEventListener('change', onSelectType);
 
-//Mostrar en pantalla el máximo n° de apariciones y el mínimo n° de apariciones.
+/*  Mostrar Maximo,mínimo y promedio del n° de apariciones*/
+maxAvg.innerHTML = computeAvgSpawns(dataPokemon, 'Max');
+minAvg.innerHTML = computeAvgSpawns(dataPokemon, 'Min');
+averageSpawns.innerHTML = computeAvgSpawns(dataPokemon, 'Promedio');
 
-//document.getElementById('max-avg').innerHTML = computeAvgSpawns(dataPokemon,'Max');
+const displayTypesOfPokemon = (types) => {
+  let string = ' ';
+  for (let i in types) {
+    string += `<p>${types[i]}</p>`;
+  }
+  return displayCountTypesOfPokemon.innerHTML = string;
+}; 
 
-//document.getElementById('min-avg').innerHTML = computeAvgSpawns(dataPokemon,'Min');
-
-
-const arrAvgSpawns =[];
-dataPokemon.forEach(element => arrAvgSpawns.push(element.avg_spawns))
-//console.log(arrAvgSpawns);
-
-const resultAvgSpawns = [];
-dataPokemon.forEach(element => resultAvgSpawns.push([element.avg_spawns,element.name]))
-//console.log(resultAvgSpawns);
-
-const MaxAvgSpawns = Math.max.apply(null,arrAvgSpawns);
-//console.log(MaxAvgSpawns);
-
-const computeMaxAvgSpawns = (data) => {
-  const Maxfilter = data.filter(obj => obj[0] === MaxAvgSpawns);
-  return ´Nombre: ${Maxfilter[1]}´ ;
-}
-console.log(computeMaxAvgSpawns(resultAvgSpawns));
-
-const computeMinAvgSpawns = (data) => {
-
-  const Minfilter = data.filter(obj => obj[0] === 0);  
-  return Minfilter;
-  
-}
-//console.log(computeMinAvgSpawns(resultAvgSpawns));
-
-
-
-
-
-  
-
-
+displayTypesOfPokemon(computeCountTypePokemons(dataPokemon, selectUniqueTypes(dataPokemon)));

@@ -26,14 +26,13 @@
 
 <main>
   <section class = "banner">
-    <img src="https://images7.alphacoders.com/661/661975.png">
+    <img src="img/fondo.jpg">
     <div class="contenedor">
       <p>
         Todo lo que quieres saber de los pokemones.
       </p>
-     <a  class ="btn-empezar" href="#sect-card">Empezar</a>
+      <a  class ="btn-empezar" href="#sect-card">Empezar</a>
     </div>
-
   </section>
   <section id="sect-card" class="section-card">
     <div class ="contenedor-cards">
@@ -45,37 +44,17 @@
           <button id= "ordspawn-d">Ordenar por numero de apariciones Descendente</button>
           <select name="type" id="type"></select>     
       </div>
-      <div id ="cards" class="card-wrapper">
-      </div>
-
+      <div id ="cards" class="card-wrapper"></div>
     </div>
-
-
-
   </section>
-
-</main>
-
-
-
-
-
-
-
-    <div id ="inicio">
-    </div>
-    <div id="panel">
-      <button id ="ordsname-a">Ordenar por nombre ascendente</button>
-      <button id= "ordsname-d">Ordenar por nombre descendente</button>
-      <button id ="ordspawn-a">Ordenar pors numero de apariciones Ascendente</button>
-      <button id= "ordspawn-d">Ordenar por numero de apariciones Descendente</button>
-      <select name="type" id="type"></select>
       <p>Máximo N°Apariciones</p>
       <p id="max-avg"></p>
       <p>Mínimo N°Apariciones</p>
       <p id="min-avg">
-     
-    </div>
+      <p>Promedio</p>
+      <p id="Promedio">
+      <p id="display-types"></p>  
+</main>           
     <footer>Derechos reservados</footer>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
