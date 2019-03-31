@@ -70,6 +70,6 @@ const displayTypesOfPokemon = (types) => {
     string += `<p>${types[i]}</p>`;
   }
   return displayCountTypesOfPokemon.innerHTML = string;
-}; 
+};
 
 displayTypesOfPokemon(computeCountTypePokemons(dataPokemon, selectUniqueTypes(dataPokemon)));
