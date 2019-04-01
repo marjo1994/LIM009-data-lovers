@@ -40,18 +40,19 @@ header label {
     cursor: pointer;
 
 }
-h1{
+.title{
     float: left;
+    padding: 7px;
 }
 .navbar-menu{
- position: absolute;
- top:50px;
- left: 0;
- width: 100%;
- height: 100vh;
- background-color: rgb(37,218,134);
- transition: all, 0.5s;
- transform: translateX(-100%);
+    position: absolute;
+    top:50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(37,218,134);
+    transition: all, 0.5s;
+    transform: translateX(-100%);
 }
 
 header.contenedor{
@@ -59,25 +60,26 @@ header.contenedor{
 
 }
 .navbar-menu li{
-  
-    color: white;
     height: 50px;
     list-style-type: none;
     padding: 15px;
     border-bottom: 1px solid rgba(21, 143, 243, 0.13);
+    text-decoration: none;
 }
-.navbar-menu li:hover {
+.navbar-menu a {
+    text-decoration: none;
+    color: white;
+}
+.navbar-menu li:hover{
     background: rgba(255,255,255,0.3);
 }
 #menu-bar:checked ~ .navbar-menu{
-transform: translateX(0%);
+    transform: translateX(0%);
 }
-
 .banner p {
     font-size: 1.5rem;
     width: 50%;
     }
-
 .banner{
     margin-top: 50px;
     position: relative;
@@ -123,8 +125,7 @@ transform: translateX(0%);
     }
     .navbar-menu li{
         border: none;
-        display: inline-table;
-    }
+        }
     header label{
         display: none;
     }
@@ -132,11 +133,9 @@ transform: translateX(0%);
         font-size: 3rem;
     }
     .banner .btn-empezar{
-        
         padding:20px;       
         font-size: 2rem;
         width: 150px;
-      
     }
 }
 
@@ -144,12 +143,30 @@ transform: translateX(0%);
 
 .section-card .process-data{
 
-    background-color: white;
+    background-color: rgb(174,174,131);
     width: 100%;
-    padding: 5%;
-    display: inline-table;
-  
+    padding: 3%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    }
+.btn-option {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    width: 110px;
+    background-color: rgb(0,79,38);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    }
+.select-type {
+    margin: 1rem;
+    width: 110px;
+    padding: 1rem;
 }
+
 
 /*Cards*/
 
@@ -163,8 +180,9 @@ transform: translateX(0%);
     text-transform: uppercase;
     font-size: 2rem;
     letter-spacing: 2px;
-    margin-bottom: 6px;
     text-align: center;
+    color: white;
+    padding: 1%;
 }
 
 .card-wrapper {
@@ -181,6 +199,7 @@ transform: translateX(0%);
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin: 2rem 0;
     padding:1.5rem;
     box-shadow: 0.5rem 0.5rem 3rem rgb(0, 255, 234);      
@@ -221,4 +240,53 @@ transform: translateX(0%);
     }
 }
 
+/* Estadísticas */
+
+.computer {
+    background-color: rgb(174,174,131);
+    width: 100%;
+    padding: 3%;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.computer div {
+    width: 98%;
+    margin: 2% 1%;
+    background-color: rgb(0,79,38);
+    color: white;
+    padding: 1%;
+    }
+.computer div h1 {
+    margin-bottom: 1rem;
+}
+.titlecomputer {
+    background-color:  rgb(37,218,134);
+    color: white;
+   }
+
+footer {
+    background-color: rgb(0,79,38);
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+.computer {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    font-size: 1.5rem;
+}
+
+.computer div {
+    width: 42%;
+}
+}
 
