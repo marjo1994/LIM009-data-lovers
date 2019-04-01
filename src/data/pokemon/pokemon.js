@@ -4086,4 +4086,8 @@ const POKEMON = {
 }
 ;;
 
+<<<<<<< HEAD
 window.POKEMON= POKEMON;
+=======
+window.POKEMON = POKEMON;
+>>>>>>> a81842a3ff0b6bc8200150a3bb25a6c29961b1dd
