@@ -28,10 +28,13 @@ usuario final. Asimismo, que tipo de información sería útil para ellos.
 
 ![cuestionario](src/img/cuestionario.png)
 
+Link
+[Respuesta de Encuestas](https://docs.google.com/spreadsheets/d/155COL-xGfHw_W1Xo9L6f2DwBDDi9HkGav-k_ntQI5wE/edit?usp=sharing)
+
 ### ¿Quiénes son los principales usuarios de producto?
 
 <p align="center">
-  <img src="img/perfiles.jpg">
+  <img src="img/perfiles.png">
   </p>
 
 
