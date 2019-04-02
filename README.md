@@ -27,6 +27,8 @@ Se ha definido una lista de preguntas que nos ayudaron a conocer comportamientos
 usuario final. Asimismo, que tipo de información sería útil para ellos.  
 
 ![cuestionario](src/img/cuestionario.png)
+
+Aqui se encuentra el formulario de las preguntas :
 [Formulario de Preguntas](https://docs.google.com/forms/d/e/1FAIpQLScj4EHVrirvWZtGpcBu59HPIw4af-aB2Rvfyj7xWpC8y14G1A/viewform)
 
 
@@ -37,7 +39,7 @@ Link :
 ### ¿Quiénes son los principales usuarios de producto?
 
 <p align="center">
-  <img src="https://ibb.co/x7kfn51">
+  <img src="https://i.ibb.co/mT6qQsh/perfiles.png" alt="perfiles" border="0">
 </p>
 
 ### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
@@ -51,10 +53,12 @@ de pokemones existen, la cantidad de veces que aparecen y los pokemones más rar
 
 ### ¿Cuándo utilizan o utilizarían el producto?
 
-En sus tiempo libres. Generalmente emplean de 2 a 3 horas para jugar y para informarse de los pokemones que han 
+En sus tiempos libres. Generalmente emplean de 2 a 3 horas para jugar y para informarse de los pokemones que han 
 capturado.
 
 ## Historias de usuario
+
+
 
 * *Primera historia*
 
