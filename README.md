@@ -2,9 +2,9 @@
 
 ## Índice
 
-* [Preámbulo](#preámbulo)
-* [Descripción](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
+* [Definición de Producto](#definición-de-producto)
+* [Entrevistas a Usuarios](#entrevistas-de-usuario)
+* [Historias de usuario](#historias-de-usuario)
 * [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
 * [Parte obligatoria](#parte-obligatoria)
 * [Parte opcional](#parte-opcional-hacker-edition)
@@ -15,129 +15,82 @@
 
 ***
 
-## Preámbulo
+## Definición de Producto
 
-Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
+El producto digital ha sido creado para usuarios que están comenzando a jugar POKEMON GO y 
+desean conocer información detallada de cada pokemon que les permita armar sus propias 
+estrategias y de esta manera, y ganar sus batallas e incrementar su nivel en el juego. 
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+## Entrevistas de Usuario
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
+Se ha definido una lista de preguntas que nos ayudaron a conocer comportamientos e intereses del 
+usuario final. Asimismo, que tipo de información sería útil para ellos.  
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+![cuestionario](src/img/cuestionario.png)
 
-\* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
+Aqui se encuentra el formulario de las preguntas :
+[Formulario de Preguntas](https://docs.google.com/forms/d/e/1FAIpQLScj4EHVrirvWZtGpcBu59HPIw4af-aB2Rvfyj7xWpC8y14G1A/viewform)
 
-## Resumen del proyecto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+Link :
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mel ínimo, etc).
+[Respuesta de Encuestas](https://docs.google.com/spreadsheets/d/155COL-xGfHw_W1Xo9L6f2DwBDDi9HkGav-k_ntQI5wE/edit?usp=sharing)
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+### ¿Quiénes son los principales usuarios de producto?
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+<p align="center">
+  <img src="https://i.ibb.co/mT6qQsh/perfiles.png" alt="perfiles" border="0">
+</p>
 
-Estos son datos que te proponemos:
+### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 
-* [Indicadores de desarrollo del Banco Mundial](src/data/worldbank/worldbank.json)
-  de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen
-  indicadores demográficos, económicos y comerciales.
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto,
-  junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
-* [Steam noticias](src/data/steam/steam.json):
-  Lista noticias relacionadas a los videojuegos presentes en la
-  plataforma de [Steam](https://store.steampowered.com/).
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de jugadores en una liga del
-  juego League of Legends (LoL), puedes revisar la documentación de su API en
-  este [link](https://developer.riotgames.com/api-methods/).
-* [Personas heridas por medio de transporte en EEUU](src/data/injuries/injuries.json).
-  Este set nos muestra el número de personas heridas en accidentes de
-  transporte, con data anual desde 1960 y categorizada por tipo de transporte
-  (aire, barco, automóvil, moto, bicicleta, ...).
+Los usuarios desean tener información que les permita imcrementar su nivel en el juego de POKEMON GO.
 
-Cada set de datos tiene una identidad gráfica que deberás utilizar en la
-interfaz. La identidad gráfica, también conocida como guía de estilos en
-diseño, de cada set la podrás encontrar en el siguiente
-[link](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE).
+### ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-## Consideraciones generales
+Puesto a que el juego de POKEMON GO se trata de coleccionar pokemones, les interesaría conocer que tipos 
+de pokemones existen, la cantidad de veces que aparecen y los pokemones más raros de aparecer.
 
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 3 semanas.
+### ¿Cuándo utilizan o utilizarían el producto?
 
-## Objetivos de aprendizaje
+En sus tiempos libres. Generalmente emplean de 2 a 3 horas para jugar y para informarse de los pokemones que han 
+capturado.
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+## Historias de usuario
 
-Dicho en palabras sencillas, aprenderás a:
 
-* Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-* Pensar en las **necesidades de los usuarios** para crear historias de usuario.
-* Escribir y trabajar con **historias de usuario**, sus definiciones de
-  terminado (_definition of done_) y Criterios de Aceptación como herramienta
-  central de la organización y planificación de tu trabajo.
-* Definir qué data y de qué forma mostrarla en el producto, basándote en
-  tu **entendimiento del usuario**.
-* Crear productos que sigan los **principios básicos de diseño visual** y
-  las **heurísticas de usabilidad**.
-* Iterar el diseño del producto, basándote en los resultados de los
-  **tests de usabilidad**.
-* Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
-* **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
-* **Manejar eventos del DOM** para permitir interacción con el usuario
-  (filtrado, ordenado, ...).
-* Entender los beneficios y complejidades de **trabajar en equipo** en un
-  ambiente de incertidumbre.
 
-## Parte Obligatoria
+* *Primera historia*
 
-Los criterios para considerar que has completado este proyecto son:
+Visualizar la información acerca de la página.
 
-### Definición del producto
+* *Segunda historia*
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+Mostrar la información de todos los pokemones (nombre, altura, peso , N° de apariciones, hora probable para encontrarlo, tipo).
 
-### Historias de usuario
+* *Tercera historia*
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+Visualizar a los todos los pokemones que se encuentren ordenado según nombre de forma ascendente (de la A a la Z) y descendente (de la Z a la A).
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+* *Cuarta historia*
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+Visualizar a los todos los pokemones que se encuentren ordenado según N° de apariciones de forma ascendente(de mayor a menor) y descendente(de menor a mayor).
 
-### Diseño de la Interfaz de Usuario
+* *quinta historia*
+
+El usuario podrá buscar los pokemones según el tipo al que corresponde ya sea grass, poisson, fire, bug, normal, etc.
+
+* *sexta historia*
+
+El usuario podrá conocer el maximo, minimo y promedio número de apariciones de los pokemones.
+
+* *septima historia*
+
+El usuario podrá conocer la cantidad de pokemones según su tipo.
+
+*NOTA
+ Para visualizar 
+
 
 #### Prototipo de baja fidelidad
 

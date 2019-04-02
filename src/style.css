@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Sree+Krushnadevaraya');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +17,7 @@ html {
 header{
     width: 100%;
     height: 50px;
-    background: rgb(37,218,134);
+    background-image: linear-gradient(to right, #9DDA73, #32C08B);
     color:white;
     position: fixed;
     top:0;
@@ -50,7 +52,7 @@ header label {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgb(37,218,134);
+    background-image:linear-gradient(to right, #9DDA73, #32C08B);
     transition: all, 0.5s;
     transform: translateX(-100%);
 }
@@ -77,8 +79,9 @@ header.contenedor{
     transform: translateX(0%);
 }
 .banner p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 50%;
+    font-family: 'Lato', sans-serif;       
     }
 .banner{
     margin-top: 50px;
@@ -87,6 +90,7 @@ header.contenedor{
 .banner img{
     width: 100%;
     height: 100%;
+    opacity: 1;
 }
 .banner .contenedor{
     position: absolute;
@@ -98,7 +102,7 @@ header.contenedor{
 .banner .btn-empezar{
     display:block;
     width: 70px;
-    background-color: rgb(81,226,159,0.5);
+    background-image:linear-gradient(to right, #9DDA73, #32C08B);
     color:white;
     padding:5px;
     margin-top:30px;
@@ -130,7 +134,10 @@ header.contenedor{
         display: none;
     }
     .banner p {
-        font-size: 3rem;
+        font-size: 5rem;
+        font-weight: bold;
+        text-shadow: 10px 10px 10px black;
+        color: #06DDD9;
     }
     .banner .btn-empezar{
         padding:20px;       
@@ -143,7 +150,7 @@ header.contenedor{
 
 .section-card .process-data{
 
-    background-color: rgb(174,174,131);
+    background-image:linear-gradient(to right, #9DDA73, #32C08B);
     width: 100%;
     padding: 3%;
     font-size: 1.5rem;
@@ -156,10 +163,12 @@ header.contenedor{
     margin: 1rem 0.5rem;
     padding: 1rem;
     width: 110px;
-    background-color: rgb(0,79,38);
+    background-color: rgba(13, 131, 105, 0.733);
     color: white;
     border-radius: 10px;
     font-size: 1.5rem;
+    border-color:rgb(138, 245, 222,0.5);
+    box-shadow: 0.5rem 0.5rem 3rem rgb(0, 255, 234); 
     }
 .select-type {
     margin: 1rem;
@@ -270,7 +279,7 @@ header.contenedor{
    }
 
 footer {
-    background-color: rgb(0,79,38);
+    background-color: rgb(178, 194, 39);
     color: white;
     text-align: center;
 }
