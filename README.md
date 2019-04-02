@@ -4,7 +4,7 @@
 
 * [Definición de Producto](#definición-de-producto)
 * [Entrevistas a Usuarios](#entrevistas-de-usuario)
-* [Consideraciones generales](#consideraciones-generales)
+* [Historias de usuario](#historias-de-usuario)
 * [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
 * [Parte obligatoria](#parte-obligatoria)
 * [Parte opcional](#parte-opcional-hacker-edition)
@@ -27,74 +27,66 @@ Se ha definido una lista de preguntas que nos ayudaron a conocer comportamientos
 usuario final. Asimismo, que tipo de información sería útil para ellos.  
 
 ![cuestionario](src/img/cuestionario.png)
+[Formulario de Preguntas](https://docs.google.com/forms/d/e/1FAIpQLScj4EHVrirvWZtGpcBu59HPIw4af-aB2Rvfyj7xWpC8y14G1A/viewform)
 
-Link
+
+Link :
+
 [Respuesta de Encuestas](https://docs.google.com/spreadsheets/d/155COL-xGfHw_W1Xo9L6f2DwBDDi9HkGav-k_ntQI5wE/edit?usp=sharing)
 
 ### ¿Quiénes son los principales usuarios de producto?
 
 <p align="center">
-  <img src="img/perfiles.png">
-  </p>
+  <img src="https://ibb.co/x7kfn51">
+</p>
 
+### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 
-## Consideraciones generales
+Los usuarios desean tener información que les permita imcrementar su nivel en el juego de POKEMON GO.
 
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 3 semanas.
+### ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-## Objetivos de aprendizaje
+Puesto a que el juego de POKEMON GO se trata de coleccionar pokemones, les interesaría conocer que tipos 
+de pokemones existen, la cantidad de veces que aparecen y los pokemones más raros de aparecer.
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+### ¿Cuándo utilizan o utilizarían el producto?
 
-Dicho en palabras sencillas, aprenderás a:
+En sus tiempo libres. Generalmente emplean de 2 a 3 horas para jugar y para informarse de los pokemones que han 
+capturado.
 
-* Aplicar y profundizar todo lo que aprendiste en el proyecto anterior.
-* Pensar en las **necesidades de los usuarios** para crear historias de usuario.
-* Escribir y trabajar con **historias de usuario**, sus definiciones de
-  terminado (_definition of done_) y Criterios de Aceptación como herramienta
-  central de la organización y planificación de tu trabajo.
-* Definir qué data y de qué forma mostrarla en el producto, basándote en
-  tu **entendimiento del usuario**.
-* Crear productos que sigan los **principios básicos de diseño visual** y
-  las **heurísticas de usabilidad**.
-* Iterar el diseño del producto, basándote en los resultados de los
-  **tests de usabilidad**.
-* Manipular **_arreglos_ (_arrays_) y _objetos_ (_objects_)**.
-* **Manipular el DOM** (agregar elementos dinámicamente basados en la data).
-* **Manejar eventos del DOM** para permitir interacción con el usuario
-  (filtrado, ordenado, ...).
-* Entender los beneficios y complejidades de **trabajar en equipo** en un
-  ambiente de incertidumbre.
+## Historias de usuario
 
-## Parte Obligatoria
+* *Primera historia*
 
-Los criterios para considerar que has completado este proyecto son:
+Visualizar la información acerca de la página.
 
-### Definición del producto
+* *Segunda historia*
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+Mostrar la información de todos los pokemones (nombre, altura, peso , N° de apariciones, hora probable para encontrarlo, tipo).
 
-### Historias de usuario
+* *Tercera historia*
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+Visualizar a los todos los pokemones que se encuentren ordenado según nombre de forma ascendente (de la A a la Z) y descendente (de la Z a la A).
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+* *Cuarta historia*
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+Visualizar a los todos los pokemones que se encuentren ordenado según N° de apariciones de forma ascendente(de mayor a menor) y descendente(de menor a mayor).
 
-### Diseño de la Interfaz de Usuario
+* *quinta historia*
+
+El usuario podrá buscar los pokemones según el tipo al que corresponde ya sea grass, poisson, fire, bug, normal, etc.
+
+* *sexta historia*
+
+El usuario podrá conocer el maximo, minimo y promedio número de apariciones de los pokemones.
+
+* *septima historia*
+
+El usuario podrá conocer la cantidad de pokemones según su tipo.
+
+*NOTA
+ Para visualizar 
+
 
 #### Prototipo de baja fidelidad
 
