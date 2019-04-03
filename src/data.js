@@ -6,7 +6,7 @@ const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar lo
       pokemonOrder = dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
     } else {
       pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
-    }
+    } 
     break;
 
   case 'DESC':// De manera descendente
