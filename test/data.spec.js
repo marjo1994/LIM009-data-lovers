@@ -772,41 +772,80 @@ describe('sorData', () => {
   test('debería ser una función', () => {
     expect(typeof sorData).toBe('function');
   });
+  test('debería retornar un array para sorData(arrdataTest,"name","ASC")', () => {
+    expect(typeof(sorData(arrdataTest, 'name', 'ASC'))).toBe('object');
+  }); 
   test('debería retornar testNameAsc para sorData(arrdataTest,"name","ASC")', () => {
     expect(sorData(arrdataTest, 'name', 'ASC')).toEqual(testNameAsc);
   }); 
+  test('debería retornar un array para sorData(arrdataTest,"name","DESC")', () => {
+    expect(typeof(sorData(arrdataTest, 'name', 'DESC'))).toBe('object');
+  });
   test('debería retornar testNameDesc para sorData(arrdataTest,"name","DESC")', () => {
     expect(sorData(arrdataTest, 'name', 'DESC')).toEqual(testNameDesc);
   }); 
+  test('deberia retornar un array para sorData(arrdataTest,"avg_spawns","ASC")', () => {
+    expect(typeof(sorData(arrdataTest, 'avg_spawns', 'ASC'))).toBe('object');
+  });   
   test('deberia retornar testAvgSpawns para sorData(arrdataTest,"avg_spawns","ASC")', () => {
     expect(sorData(arrdataTest, 'avg_spawns', 'ASC')).toEqual(testAvgSpawnsAsc);
   });
+  test('deberia retornar un array para sorData(arrdataTest,"avg_spawns","DESC")', () => {
+    expect(typeof(sorData(arrdataTest, 'avg_spawns', 'DESC'))).toBe('object');
+  });
   test('deberia retornar testAvgSpawns para sorData(arrdataTest,"avg_spawns","DESC")', () => {
     expect(sorData(arrdataTest, 'avg_spawns', 'DESC')).toEqual(testAvgSpawnsDesc);
-  });
+  });  
 });
 
 describe('selectUniqueTypes', () => {
+  test('debería ser una función', () => {
+    expect(typeof selectUniqueTypes).toBe('function');
+  });
+  test('debería retornar un array para selectUniqueTypes(arrdataTest)', () => {
+    expect(typeof(selectUniqueTypes(arrdataTest))).toBe('object');
+  }); 
   test('debería retornar testUniqueTypes para selectUniqueTypes(arrdataTest)', () => {
     expect(selectUniqueTypes(arrdataTest)).toEqual(testUniqueTypes);
   }); 
 });
 
 describe('filterBy', () => {
+  test('debería ser una función', () => {
+    expect(typeof filterBy).toBe('function');
+  });
+  test('debería retornar un array para testFilterbyFire', () => {
+    expect(typeof(filterBy(arrdataTest, 'Grass'))).toBe('object');
+  });
   test('debería retornar testFilterbyFire para filterBy(arrdataTest, "Fire")', () => {
     expect(filterBy(arrdataTest, 'Fire')).toEqual(testFilterbyFire);
   }); 
+  test('debería retornar un array para testFilterbyGrass ', () => {
+    expect(typeof(filterBy(arrdataTest, 'Grass'))).toBe('object');
+  });
   test('debería retornar testFilterbyGrass para filterBy(arrdataTest, "Grass")', () => {
     expect(filterBy(arrdataTest, 'Grass')).toEqual(testFilterbyGrass);
-  });
+  }); 
 });
 
 describe('computeAvgSpawns', () => {
+  test('debería ser una función', () => {
+    expect(typeof computeAvgSpawns).toBe('function');
+  }); 
+  test('deberia retornar un numero cuando selecciones Max', () => {
+    expect(typeof(computeAvgSpawns(arrdataTest, 'Max'))).toBe('number');
+  }); 
   test('deberia retornar 69 para computeAvgSpawns(arrdataTest,"Max")', () => {
     expect(computeAvgSpawns(arrdataTest, 'Max')).toEqual(69);
   });
+  test('deberia retornar un numero cuando seleccione Min', () => {
+    expect(typeof(computeAvgSpawns(arrdataTest, 'Min'))).toBe('number');
+  });
   test('deberia retornar 1.7 para computeAvgSpawns(arrdataTest,"Min")', () => {
     expect(computeAvgSpawns(arrdataTest, 'Min')).toEqual(1.7);
+  }); 
+  test('deberia retornar un numero para el promedio', () => {
+    expect(typeof(computeAvgSpawns(arrdataTest, 'Promedio'))).toBe('number');
   }); 
   test('deberia retornar 25.05 para computeAvgSpawns(arrdataTest,"Promedio")', () => {
     expect(computeAvgSpawns(arrdataTest, 'Promedio')).toEqual(25.05);
@@ -814,6 +853,12 @@ describe('computeAvgSpawns', () => {
 });
 
 describe('displayTypesOfPokemon', () => {
+  test('debería ser una función', () => {
+    expect(typeof computeCountTypePokemons).toBe('function');
+  }); 
+  test('debería retornar un array', () => {
+    expect(typeof(computeCountTypePokemons(arrdataTest, selectUniqueTypes(arrdataTest)))).toBe('object');
+  });
   test('debería retornar  para computeCountTypePokemons(arrdataTest,uniqueTypes)', () => {
     expect(computeCountTypePokemons(arrdataTest, selectUniqueTypes(arrdataTest))).toEqual(["Grass  3", "Poison  3", "Fire  1"]);
   });
