@@ -168,12 +168,14 @@ header.contenedor{
     border-radius: 10px;
     font-size: 1.5rem;
     border-color:rgb(138, 245, 222,0.5);
-    box-shadow: 0.5rem 0.5rem 3rem rgb(0, 255, 234); 
+    box-shadow: 0.5rem 0.5rem 1rem rgb(0, 255, 234); 
     }
 .select-type {
     margin: 1rem;
     width: 110px;
     padding: 1rem;
+    border-color: rgba(13, 131, 105, 0.733);
+    border-radius: 10px;
 }
 
 
@@ -187,7 +189,7 @@ header.contenedor{
 
 .heading {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 2px;
     text-align: center;
     color: white;
@@ -252,7 +254,7 @@ header.contenedor{
 /* Estadísticas */
 
 .computer {
-    background-color: rgb(174,174,131);
+    background-color: rgb(25, 133, 93);
     width: 100%;
     padding: 3%;
     font-size: 1.5rem;
@@ -266,7 +268,7 @@ header.contenedor{
 .computer div {
     width: 98%;
     margin: 2% 1%;
-    background-color: rgb(0,79,38);
+    background-image:linear-gradient(to right, #9DDA73, #32C08B);
     color: white;
     padding: 1%;
     }
@@ -274,12 +276,12 @@ header.contenedor{
     margin-bottom: 1rem;
 }
 .titlecomputer {
-    background-color:  rgb(37,218,134);
+    background-image:linear-gradient(to right, rgb(226, 243, 74),rgb(206, 223, 148));
     color: white;
-   }
-
+  
+}
 footer {
-    background-color: rgb(178, 194, 39);
+    background-color: rgb(77, 85, 5);
     color: white;
     text-align: center;
 }
