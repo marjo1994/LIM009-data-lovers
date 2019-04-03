@@ -12,6 +12,7 @@ html {
     font-size: 10px;
  }
 
+
  /*Header & Banner*/
 
 header{
@@ -24,7 +25,7 @@ header{
     left: 0;
     z-index: 100;
     font-size: 1.6rem;
-}
+    }
 .contenedor{
     width: 98%;
     margin: auto;
@@ -40,7 +41,6 @@ header label {
     font-size: 28px;
     margin: 6px 0;
     cursor: pointer;
-
 }
 .title{
     float: left;
