@@ -49,27 +49,27 @@ const filterBy = (data, condition) => { /* Función para filtrar los pokemones p
 
 window.filterBy = filterBy;
 
-const computeAvgSpawns = (arr, option) => { /* funcion para calcular max,min,promedio de avg-spawns */
+const computeAvgSpawns = (data, option) => { /* funcion para calcular max,min,promedio de avg-spawns */
   let arrAvgSpawns = [];
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  for (let i = 0; i < arr.length; i++) {
-    arrAvgSpawns.push(arr[i].avg_spawns);
+  for (let i = 0; i < data.length; i++) {
+    arrAvgSpawns.push(data[i].avg_spawns);
   }
   if (option === 'Max') {
     return Math.max.apply(null, arrAvgSpawns);
   } else if (option === 'Min') {
     return Math.min.apply(null, arrAvgSpawns);
   } else {
-    return (arrAvgSpawns.reduce(reducer)) / arr.length;
+    return (arrAvgSpawns.reduce(reducer)) / data.length;
   }
 };
 
 window.computeAvgSpawns = computeAvgSpawns;
 
-const computeCountTypePokemons = (data, condition) => { /*  funcion para contar pokemones segun tipo  */
+const computeCountTypePokemons = (data, type) => { /*  funcion para contar pokemones segun tipo  */
   let counTypePokemon = [];
-  for (let i = 0; i < condition.length; i++) {
-    counTypePokemon.push(condition[i] + '  ' + (filterBy(data, condition[i]).length));
+  for (let i = 0; i < type.length; i++) {
+    counTypePokemon.push(type[i] + '  ' + (filterBy(data, type[i]).length));
   }
   return counTypePokemon;
 };
