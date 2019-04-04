@@ -1,4 +1,4 @@
-global.window = global;
+window.global = window;
 require('../src/data');
 require('./data.spec.js');
 
@@ -258,7 +258,6 @@ const testNameAsc = [{
     "name": "Ivysaur"
   }]
 }];
-
 const testNameDesc = [{
   "id": 3,
   "num": "003",
@@ -772,6 +771,9 @@ describe('sorData', () => {
   test('debería ser una función', () => {
     expect(typeof sorData).toBe('function');
   });
+  test('debería retornar "array" para pokemonOrder', () => {
+    expect(typeof sorData()).toBe('array');
+  }); 
   test('debería retornar testNameAsc para sorData(arrdataTest,"name","ASC")', () => {
     expect(sorData(arrdataTest, 'name', 'ASC')).toEqual(testNameAsc);
   }); 

@@ -25,7 +25,7 @@ header{
     left: 0;
     z-index: 100;
     font-size: 1.6rem;
-    }
+}
 .contenedor{
     width: 98%;
     margin: auto;
@@ -278,24 +278,21 @@ header.contenedor{
 .titlecomputer {
     background-image:linear-gradient(to right, rgb(226, 243, 74),rgb(206, 223, 148));
     color: white;
-  
+ 
 }
 footer {
     background-color: rgb(77, 85, 5);
     color: white;
     text-align: center;
 }
-
 @media screen and (min-width: 700px) {
 .computer {
     display: flex;
     justify-content: space-around;
 }
-
 footer {
     font-size: 1.5rem;
 }
-
 .computer div {
     width: 42%;
 }
