@@ -16,7 +16,7 @@ const displayCards = (data) => { /* mostrar los datos de pokemones en pantalla*/
   for (let i = 0; i < data.length; i++) {
     string += `
       <div class="card">
-          <p class="name-pokemon">${data[i].name}</p>
+          <p class="name-pokemon white">${data[i].name}</p>
           <img class="card-img" src="${data[i].img}" alt="imagen de ${data[i].name}">
           <p> Altura: ${data[i].height}</p>
           <p> Peso: ${data[i].weight}</p>
