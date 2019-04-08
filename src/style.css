@@ -12,6 +12,7 @@ html {
     font-size: 10px;
  }
 
+
  /*Header & Banner*/
 
 header{
@@ -40,7 +41,6 @@ header label {
     font-size: 28px;
     margin: 6px 0;
     cursor: pointer;
-
 }
 .title{
     float: left;
