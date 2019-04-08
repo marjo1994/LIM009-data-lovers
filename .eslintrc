@@ -27,7 +27,7 @@
     "space-before-blocks": 1,
     "space-in-parens": 1,
     "spaced-comment": 1,
-    "id-length": [1, { "exceptions": ["a", "b", "i"] }],
+    "id-length": [1, { "exceptions": ["a", "b", "i","v","f"] }],
     "indent": [1, 2],
     "no-array-constructor": 1,
     "no-const-assign": "error",

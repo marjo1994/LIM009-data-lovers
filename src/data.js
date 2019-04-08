@@ -1,7 +1,7 @@
 const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar los pokemones por nombre y N Apariciones promedio
   let pokemonOrder = [];
   switch (sortOrder) {
-  case 'ASC':// De manera ascedente 
+  case 'ASC'://  Ordenar de manera ascedente 
     if (sortBy === 'name') {
       pokemonOrder = dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
     } else {
@@ -9,7 +9,7 @@ const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar lo
     } 
     break;
 
-  case 'DESC':// De manera descendente
+  case 'DESC':// Ordenar de manera descendente
     if (sortBy === 'name') {
       pokemonOrder = dataPokemon.sort((a, b) => (a.name < b.name ? 1 : -1));
     } else {
@@ -49,7 +49,7 @@ const filterBy = (data, condition) => { /* Función para filtrar los pokemones p
 
 window.filterBy = filterBy;
 
-const computeAvgSpawns = (data, option) => { /* funcion para calcular max,min,promedio de avg-spawns */
+const computeAvgSpawns = (data, option) => { /* función para calcular max,min,promedio de avg-spawns */
   let arrAvgSpawns = [];
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
   for (let i = 0; i < data.length; i++) {
@@ -60,13 +60,13 @@ const computeAvgSpawns = (data, option) => { /* funcion para calcular max,min,pr
   } else if (option === 'Min') {
     return Math.min.apply(null, arrAvgSpawns);
   } else {
-    return (arrAvgSpawns.reduce(reducer)) / data.length;
+    return parseInt((arrAvgSpawns.reduce(reducer)) / data.length);
   }
 };
 
 window.computeAvgSpawns = computeAvgSpawns;
 
-const computeCountTypePokemons = (data, type) => { /*  funcion para contar pokemones segun tipo  */
+const computeCountTypePokemons = (data, type) => { /*  función para contar pokemones segun tipo  */
   let counTypePokemon = [];
   for (let i = 0; i < type.length; i++) {
     counTypePokemon.push(type[i] + '  ' + (filterBy(data, type[i]).length));

@@ -56,28 +56,33 @@
       </div>
     </section>
     
-    <section id = "computer" >
-    <p class="heading titlecomputer white size-1-5">Estadísticas</p>
-      <div class="computer white size-1-5">
-          <div class="color-gradiente">
-              <h2>N° Apariciones</h2>
-              <p>Máximo N°Apariciones</p>
-              <p id="max-avg"></p>
-              <p>Mínimo N°Apariciones</p>
-              <p id="min-avg"> </p>
-              <p>Promedio</p>
-              <p id="Promedio"> </p>
-          </div>
-          <div class="color-gradiente">
-              <h2>Cantidad de pokemones según tipo</h2>       
+    <section id = "computer">
+    <p class="heading titlecomputer">Estadísticas</p> 
+        <div class="computer">          
+          <div id="columnchart_values" class="charts">
+           
+            </div>           
+            <div>
+              <h1>Cantidad de pokemones según tipo</h1>       
             <p id="display-types"></p>
           </div>
-      </div>     
+          </div>     
     </section>    
   </main>           
     <footer class="white size-1-5">Derechos reservados - Liz Rojas & Marjorie Herrera</footer>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">    
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+    </script>
+    
+    
+   
+
+
+
   </body>
 </html>

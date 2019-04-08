@@ -6,9 +6,6 @@ const orderNameDes = document.getElementById('ordsname-d');
 const orderAvgSpawnsAsc = document.getElementById('ordspawn-a');
 const orderAvgSpawnsDes = document.getElementById('ordspawn-d');
 const typeOf = document.getElementById('type');
-const maxAvg = document.getElementById('max-avg');
-const minAvg = document.getElementById('min-avg');
-const averageSpawns = document.getElementById('Promedio');
 const displayCountTypesOfPokemon = document.getElementById('display-types');
 
 const displayCards = (data) => { /* mostrar los datos de pokemones en pantalla*/
@@ -59,11 +56,6 @@ const onSelectType = () => { /* funcion que muestra pokemones segun su tipo*/
 };
 typeOf.addEventListener('change', onSelectType);
 
-/*  Mostrar Maximo,mínimo y promedio del n° de apariciones*/
-maxAvg.innerHTML = computeAvgSpawns(dataPokemon, 'Max');
-minAvg.innerHTML = computeAvgSpawns(dataPokemon, 'Min');
-averageSpawns.innerHTML = computeAvgSpawns(dataPokemon, 'Promedio');
-
 const displayTypesOfPokemon = (types) => {
   let string = ' ';
   for (let i in types) {
@@ -73,3 +65,30 @@ const displayTypesOfPokemon = (types) => {
 }; 
 
 displayTypesOfPokemon(computeCountTypePokemons(dataPokemon, selectUniqueTypes(dataPokemon)));
+
+// eslint-disable-next-line no-unused-vars
+function drawChart() {
+  let data = google.visualization.arrayToDataTable([
+    ["Element", "Cantidad de Aparición", { role: "style" } ],
+    ["Maxima Aparición ", computeAvgSpawns(dataPokemon, 'Max'), "#b87333"],
+    ["Minima Aparición ", computeAvgSpawns(dataPokemon, 'Min'), "silver"],
+    ["Promedio N°Apariciones", computeAvgSpawns(dataPokemon, 'Promedio'), "gold"],
+  ]);
+  let view = new google.visualization.DataView(data);
+  view.setColumns([0, 1,
+    { calc: "stringify",
+      sourceColumn: 1,
+      type: "string",
+      role: "annotation" },
+    2]);
+
+  let options = {
+    title: "Apariciones de todos los pokemones",
+    width: 600,
+    height: 400,
+    bar: {groupWidth: "95%"},
+    legend: { position: "none" },
+  };
+  let chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+  chart.draw(view, options);
+}
