@@ -12,20 +12,26 @@ html {
     font-size: 10px;
  }
 
+.white {
+    color:white;
+}
 
+.size-1-5 {
+    font-size: 1.5rem;
+}
+.color-gradiente {
+    background-image: linear-gradient(to right, #9DDA73, #32C08B);
+}
  /*Header & Banner*/
 
 header{
     width: 100%;
-    height: 50px;
-    background-image: linear-gradient(to right, #9DDA73, #32C08B);
-    color:white;
+    height: 50px;    
     position: fixed;
     top:0;
     left: 0;
     z-index: 100;
-    font-size: 1.6rem;
-}
+    }
 .contenedor{
     width: 98%;
     margin: auto;
@@ -52,14 +58,12 @@ header label {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image:linear-gradient(to right, #9DDA73, #32C08B);
     transition: all, 0.5s;
     transform: translateX(-100%);
 }
 
 header.contenedor{
     display: table;
-
 }
 .navbar-menu li{
     height: 50px;
@@ -70,7 +74,6 @@ header.contenedor{
 }
 .navbar-menu a {
     text-decoration: none;
-    color: white;
 }
 .navbar-menu li:hover{
     background: rgba(255,255,255,0.3);
@@ -79,7 +82,6 @@ header.contenedor{
     transform: translateX(0%);
 }
 .banner p {
-    font-size: 1rem;
     width: 50%;
     font-family: 'Lato', sans-serif;       
     }
@@ -97,13 +99,10 @@ header.contenedor{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color:white;
 }
 .banner .btn-empezar{
     display:block;
     width: 70px;
-    background-image:linear-gradient(to right, #9DDA73, #32C08B);
-    color:white;
     padding:5px;
     margin-top:30px;
     border-radius: 10px;
@@ -111,7 +110,7 @@ header.contenedor{
     text-decoration: none;
     text-align: center;
 }
-@media (min-width:700px){
+@media screen and (min-width:700px) {
     .navbar-menu {
         position: static;
         width: auto;
@@ -149,35 +148,41 @@ header.contenedor{
 /* diseño de funcionalidades*/
 
 .section-card .process-data{
-
-    background-image:linear-gradient(to right, #9DDA73, #32C08B);
     width: 100%;
     padding: 3%;
-    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: space-around;
-    }
+}
+
 .btn-option {
     margin: 1rem 0.5rem;
     padding: 1rem;
-    width: 110px;
+    width: 80px;
     background-color: rgba(13, 131, 105, 0.733);
-    color: white;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-color:rgb(138, 245, 222,0.5);
     box-shadow: 0.5rem 0.5rem 1rem rgb(0, 255, 234); 
-    }
+}
 .select-type {
     margin: 1rem;
-    width: 110px;
+    width: 80px;
     padding: 1rem;
     border-color: rgba(13, 131, 105, 0.733);
     border-radius: 10px;
 }
-
+@media screen and (min-width:700px) {
+    .btn-option {
+        width: 110px;
+        font-size: 1.5rem;
+        }
+    .select-type {
+        width: 110px;
+        font-size: 1.5rem;
+        }
+}
 
 /*Cards*/
 
@@ -189,10 +194,8 @@ header.contenedor{
 
 .heading {
     text-transform: uppercase;
-    font-size: 2.5rem;
     letter-spacing: 2px;
     text-align: center;
-    color: white;
     padding: 1%;
 }
 
@@ -215,22 +218,17 @@ header.contenedor{
     padding:1.5rem;
     box-shadow: 0.5rem 0.5rem 3rem rgb(0, 255, 234);      
 }
-
 .card-img {
    margin: 1rem 0;
 }
-
-
-.card p {
-    font-size: 1.5rem;
-}
-
 .card .name-pokemon {
     font-size: 2rem;
-    color: white;
 }
 
 @media screen and (min-width: 700px) {
+    .heading {
+        font-size: 2rem;
+    }
     .card-wrapper {
         flex-direction: row;
         flex-wrap: wrap;
@@ -240,6 +238,7 @@ header.contenedor{
 
     .card {
         margin: 2rem;
+        font-size: 1.5rem;
     }
 
     @keyframes movementofcards {
@@ -257,47 +256,44 @@ header.contenedor{
     background-color: rgb(25, 133, 93);
     width: 100%;
     padding: 3%;
-    font-size: 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    }
+
+.computer div {   
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+}
+.computer .charts{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    left: 2%;
 }
 
-.computer div {
-    width: 98%;
-    margin: 2% 1%;
-    background-image:linear-gradient(to right, #9DDA73, #32C08B);
-    color: white;
-    padding: 1%;
-    }
 .computer div h1 {
     margin-bottom: 1rem;
 }
 .titlecomputer {
     background-image:linear-gradient(to right, rgb(226, 243, 74),rgb(206, 223, 148));
-    color: white;
-  
 }
 footer {
     background-color: rgb(77, 85, 5);
-    color: white;
     text-align: center;
 }
 
 @media screen and (min-width: 700px) {
-.computer {
-    display: flex;
-    justify-content: space-around;
-}
+    .computer {
+        display: flex;
+        justify-content: space-around;
+    }
 
-footer {
-    font-size: 1.5rem;
-}
-
-.computer div {
-    width: 42%;
-}
+    .computer div {
+        width: 42%;
+    }
 }
 
