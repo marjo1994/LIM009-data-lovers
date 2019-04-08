@@ -24,7 +24,6 @@ header{
     left: 0;
     z-index: 100;
     font-size: 1.6rem;
-    
 }
 .contenedor{
     width: 98%;
@@ -263,7 +262,7 @@ header.contenedor{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+     
 }
 
 .computer div {
@@ -273,6 +272,12 @@ header.contenedor{
     color: white;
     padding: 1%;
     }
+
+.computer .charts{
+    position: relative;
+    padding: 3%;
+    }
+    
 .computer div h1 {
     margin-bottom: 1rem;
 }

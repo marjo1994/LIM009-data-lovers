@@ -157,8 +157,11 @@ A nivel básico empleamos los issues haciendo match de lo que estaba en el table
 
 ### Excel
 Colocamos todos los recursos que estructuramos y de consulta que utilizamos durante el proyecto.
+<p align="center">
+ <img src="https://i.ibb.co/dcxqRRN/excel.png" alt="excel" border="0">
+</p>
 
-
+[Excel ](https://docs.google.com/spreadsheets/d/1cX1nXme0nskAsJgKeAAP7d3QPJ4ke730Q_DPayrJPOE/edit?usp=sharing)
 
 ## Futuras mejoras
 

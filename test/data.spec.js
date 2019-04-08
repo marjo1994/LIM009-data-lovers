@@ -848,7 +848,7 @@ describe('computeAvgSpawns', () => {
     expect(typeof(computeAvgSpawns(arrdataTest, 'Promedio'))).toBe('number');
   }); 
   test('deberia retornar 25.05 para computeAvgSpawns(arrdataTest,"Promedio")', () => {
-    expect(computeAvgSpawns(arrdataTest, 'Promedio')).toEqual(25.05);
+    expect(computeAvgSpawns(arrdataTest, 'Promedio')).toEqual(25);
   }); 
 });
 
