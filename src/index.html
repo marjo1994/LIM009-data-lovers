@@ -9,18 +9,18 @@
     
   </head>
   <body>
-  <header class="white size-1-5 color-gradiente">
+  <header>
     <div class="contenedor"> 
       <div>
-        <h1 class="title white">Pokeinfo</h1> 
+        <h1 class="title">Pokeinfo</h1> 
        </div>
        <input type="checkbox" id="menu-bar">
        <label class="icon-menu" for="menu-bar"></label>
-       <nav class="navbar-menu color-gradiente">
+       <nav class="navbar-menu">
          <ul class="nav">
-           <li><a class="white" href="#home">Inicio</a></li>
-           <li><a class="white" href="#sect-card">Cards</a></li>
-           <li><a class="white" href="#computer">Estadisticas</a></li>
+           <li><a href="#home">Inicio</a></li>
+           <li><a href="#sect-card">Cards</a></li>
+           <li><a href="#computer">Estadisticas</a></li>
          </ul>
         </nav>
     </div>
@@ -28,24 +28,27 @@
   <main>
     <section class = "banner" id= "home">
       <img src="https://images8.alphacoders.com/648/thumb-1920-648607.png">
-      <div class="contenedor white">
-        <p class="size-1-5">Encuentra la información de tus pokemones favoritos.</p>
-        <a  class ="btn-empezar white color-gradiente" href="#sect-card">Empezar</a>
+      <div class="contenedor">
+        <p >
+            Encuentra la información de tus pokemones favoritos.
+        </p>
+        <br>
+        <a  class ="btn-empezar" href="#sect-card">Empezar</a>
       </div>
     </section>
     <section id="sect-card" class="section-card">
       <div class ="contenedor-cards">
-        <p class="heading white">Todo lo que querías saber de tus pokemones</p>
-        <div class="process-data size-1-5 color-gradiente">
+        <p class="heading">Todo lo que quieras saber de tus pokemones</p>
+        <div class="process-data">
           <div>
               <p>Ordenar por Nombre</p>
-              <button class ="btn-option white" id ="ordsname-a">Ascendente</button>
-              <button class ="btn-option white" id= "ordsname-d">Descendente</button>
+              <button class ="btn-option" id ="ordsname-a">Ascendente</button>
+              <button class ="btn-option" id= "ordsname-d">Descendente</button>
           </div>
           <div>
               <p>Ordenar por N°Apariciones</p>
-              <button class ="btn-option white" id ="ordspawn-a">Ascendente</button>
-              <button class ="btn-option white" id= "ordspawn-d">Descendente</button>
+              <button class ="btn-option" id ="ordspawn-a">Ascendente</button>
+              <button class ="btn-option" id= "ordspawn-d">Descendente</button>
           </div>
           <div>
               <p>Filtrar por tipo</p>
@@ -57,32 +60,31 @@
     </section>
     
     <section id = "computer">
-    <p class="heading titlecomputer">Estadísticas</p> 
-        <div class="computer">          
-          <div id="columnchart_values" class="charts">
-           
+    <p class="heading titlecomputer">Estadísticas</p>
+      <div class="computer">
+          <div>
+              <h1>N° Apariciones</h1>
+              <p>Máximo N°Apariciones</p>
+              <p id="max-avg"></p>
+              <p>Mínimo N°Apariciones</p>
+              <p id="min-avg"> </p>
+              <p>Promedio</p>
+              <p id="Promedio"> </p>
+          </div>
             </div>           
-            <div>
+          </div>
+          <div>
               <h1>Cantidad de pokemones según tipo</h1>       
             <p id="display-types"></p>
           </div>
+      </div>     
           </div>     
+      </div>     
     </section>    
   </main>           
-    <footer class="white size-1-5">Derechos reservados - Liz Rojas & Marjorie Herrera</footer>
+    <footer>Derechos reservados - Liz Rojas & Marjorie Herrera</footer>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">    
-      google.charts.load('current', {packages: ['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-    </script>
-    
-    
-   
-
-
-
   </body>
 </html>
