@@ -27,7 +27,7 @@
     "space-before-blocks": 1,
     "space-in-parens": 1,
     "spaced-comment": 1,
-    "id-length": [1, { "exceptions": ["a", "b", "i","v","f"] }],
+    "id-length": [1, { "exceptions": ["a", "b", "i","v","f","x"] }],
     "indent": [1, 2],
     "no-array-constructor": 1,
     "no-const-assign": "error",
@@ -36,12 +36,14 @@
  },
   "extends": "eslint:recommended",
   "globals": {
-    "sorData": true,
-    "selectUniqueTypes":true,
+    "sorData": false,
+    "selectUniqueTypes":false,
     "filterBy":false,
-    "computeAvgSpawns":true,
-    "computeCountTypePokemons" :true,
-    "Set" :true,
-    "google": false
+    "computeAvgSpawns":false,
+    "computeCountTypePokemons" :false,
+    "Set" :false,
+    "google": false,
+    "dataPokemon": true,
+    "drawChart": false
   }
 }
