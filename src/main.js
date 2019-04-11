@@ -1,5 +1,16 @@
+
+let myRequest = new Request('https://marjo1994.github.io/LIM009-data-lovers/src/data/pokemon/pokemon.json');
+let mostrar = () => {
+  fetch(myRequest)
+    .then(resp => {
+      return resp.json();
+    })
+    .then(data => {
+      console.log(data.pokemon);
+    });
+};
+
 /* Manejo del DOM */
-const dataPokemon = window.POKEMON.pokemon;
 const cardsContainer = document.getElementById('cards');
 const orderNameAsc = document.getElementById('ordsname-a');
 const orderNameDes = document.getElementById('ordsname-d');
@@ -25,7 +36,7 @@ const displayCards = (data) => { /* mostrar los datos de pokemones en pantalla*/
   }
   return cardsContainer.innerHTML = string;
 };
-displayCards(dataPokemon);
+displayCards(mostrar);
 
 orderNameAsc.addEventListener('click', () => { /*  Ordenado ascendente por nombre*/
   displayCards(sorData(dataPokemon, 'name', 'ASC'));
