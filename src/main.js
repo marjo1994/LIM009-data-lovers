@@ -1,5 +1,5 @@
 
-let myRequest = new Request('https://marjo1994.github.io/LIM009-data-lovers/src/data/pokemon/pokemon.json');
+let myRequest = new Request('./data/pokemon/pokemon.json');
 let mostrar = () => {
   fetch(myRequest)
     .then(resp => {
@@ -10,6 +10,7 @@ let mostrar = () => {
     });
 };
 
+mostrar();
 /* Manejo del DOM */
 const cardsContainer = document.getElementById('cards');
 const orderNameAsc = document.getElementById('ordsname-a');
