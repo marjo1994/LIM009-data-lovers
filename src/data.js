@@ -69,10 +69,9 @@ window.computeAvgSpawns = computeAvgSpawns;
 const computeCountTypePokemons = (data, type) => { /*  función para contar pokemones segun tipo  */
   let counTypePokemon = [];
   for (let i = 0; i < type.length; i++) {
-    counTypePokemon.push(type[i] + '  ' + (filterBy(data, type[i]).length));
+    counTypePokemon.push([filterBy(data, type[i]).length, type[i]]);
   }
   return counTypePokemon;
 };
 
 window.computeCountTypePokemons = computeCountTypePokemons;
-
