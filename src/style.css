@@ -262,18 +262,21 @@ header.contenedor{
     flex-wrap: wrap;
     }
 
-.computer div {   
-    overflow: hidden;
+.computer .charts {
+    width: 100%;
+}
+/* .computer div {   
+    overflow: visible;
     position: relative;
-    padding-bottom: 100%;
+    padding-bottom:50%;
     height: 0;
 }
 .computer .charts{
     position: absolute;
-    width: 100%;
+    width: 45%;
     height: 500px;
     left: 2%;
-}
+} */
 
 .computer div h1 {
     margin-bottom: 1rem;
@@ -292,8 +295,8 @@ footer {
         justify-content: space-around;
     }
 
-    .computer div {
-        width: 42%;
+    .computer .charts {
+        width: 50%;
     }
 }
 

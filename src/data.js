@@ -1,19 +1,19 @@
-const sorData = (dataPokemon, sortBy, sortOrder) => {// Función para ordenar los pokemones por nombre y N Apariciones promedio
+const sorData = (data, sortBy, sortOrder) => {// Función para ordenar los pokemones por nombre y N Apariciones promedio
   let pokemonOrder = [];
   switch (sortOrder) {
   case 'ASC'://  Ordenar de manera ascedente 
     if (sortBy === 'name') {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.name > b.name ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.name > b.name ? 1 : -1));
     } else {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.avg_spawns > b.avg_spawns ? 1 : -1));
     } 
     break;
 
   case 'DESC':// Ordenar de manera descendente
     if (sortBy === 'name') {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.name < b.name ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.name < b.name ? 1 : -1));
     } else {
-      pokemonOrder = dataPokemon.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1));
+      pokemonOrder = data.sort((a, b) => (a.avg_spawns < b.avg_spawns ? 1 : -1));
     }
     break;
   default:
@@ -69,10 +69,9 @@ window.computeAvgSpawns = computeAvgSpawns;
 const computeCountTypePokemons = (data, type) => { /*  función para contar pokemones segun tipo  */
   let counTypePokemon = [];
   for (let i = 0; i < type.length; i++) {
-    counTypePokemon.push(type[i] + '  ' + (filterBy(data, type[i]).length));
+    counTypePokemon.push([filterBy(data, type[i]).length, type[i]]);
   }
   return counTypePokemon;
 };
 
 window.computeCountTypePokemons = computeCountTypePokemons;
-

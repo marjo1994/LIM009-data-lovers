@@ -42,6 +42,10 @@
     "computeAvgSpawns":true,
     "computeCountTypePokemons" :true,
     "Set" :true,
+    "displayCards" :true,
+    "displaySelectTypesOfPokemon" :true,
+    "displayTypesOfPokemon" :true,
+   " getAll":false,
     "google": false
   }
 }
