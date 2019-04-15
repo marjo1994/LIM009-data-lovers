@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="fontello.css" />
-    <link rel="stylesheet" href="style.css" />    
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">    
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+    </script>
   </head>
   <body>
     <header class="white size-1-5 color-gradiente">
@@ -71,13 +76,8 @@
       </section>    
     </main>           
     <footer class="white size-1-5">Derechos reservados - Liz Rojas & Marjorie Herrera</footer>
-    <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-       
-     
-      
     
    </body>
 </html>
